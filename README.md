@@ -2,6 +2,7 @@
 PlayRTC의 문서 저장소.
 - [MkDocs](http://www.mkdocs.org/) 기반
 - [Docker Documentation 저장소](https://github.com/docker/docker/tree/master/docs) 참고
+- [Read the Docs Theme](https://github.com/mkdocs/mkdocs/tree/master/mkdocs/themes/readthedocs) 테마 응용
 
 ## 개요
 다음과 같은 문제를 해결하기 위해 문서 저장소를 사용함

@@ -4,19 +4,20 @@
 - [자바스크립트 수업 - 생활코딩](http://opentutorials.org/course/743)
 
 ## 바로 실행해 보기
-이전 장 `환경설정하기`를 통해 필요한 환경을 갖춥니다.
+이전 장을 통해 필요한 환경을 갖춥니다.
 
-예제앱을 다운로드 받거나 아래와 같이 `Git` 클론을 통해 준비합니다.
+예제앱을 다운로드 받거나 아래와 같이 PlayRTC의 Git 저장소 클론을 통해 준비합니다.
 
 - Windows :
+```DOS
+c:\> cd %UserProfile%
+c:\> mkdir www
+c:\> cd www
+c:\> git clone https://github.com/playrtc/example-simple-chat-webapp
 ```
-	c:\> cd %UserProfile%
-	c:\> mkdir www
-	c:\> cd www
-	c:\> git clone https://github.com/playrtc/example-simple-chat-webapp
-```
+
 - OSX, unix-like :
-```
+```shell
 	$ cd ~ && mkdir www && cd www
 	$ git clone https://github.com/playrtc/example-simple-chat-webapp
 ```
@@ -24,12 +25,13 @@
 그리고, 다운로드 압축을 푼 디렉토리에서 명령 프롬프트/파워쉘/터미널을 실행시키고 다음과 같이 웹 서버를 실행 시킵니다.
 
 - Windows :
-```
+```DOS
 	c:\> cd %UserProfile%/www
 	c:\> harp server -p 8000
 ```
+
 - OSX, unix-like :
-```
+```shell
 	$ cd ~/www && harp server -p 8000
 ```
 
@@ -44,19 +46,19 @@
 
 그러면, 기능과 함께 화면 구성을 살펴보고 사용해 봅시다.
 
-@startuml
+<img uml="
 
 actor Caller
 control PlayRTCServer
 actor Callee
 
-Caller -\> PlayRTCServer: 채널 생성을 요청
-PlayRTCServer -\> Caller: 채널 접속 및 생성된 채널의 ID를 알려줌
-Callee -\> PlayRTCServer: 채널의 ID를 입력하고 채널 접속을 시도
-PlayRTCServer -\> Callee: 채널 접속
-Caller \<-\> Callee: P2P 연결
+Caller -> PlayRTCServer: 채널 생성을 요청
+PlayRTCServer -> Caller: 채널 접속 및 생성된 채널의 ID를 알려줌
+Callee -> PlayRTCServer: 채널의 ID를 입력하고 채널 접속을 시도
+PlayRTCServer -> Callee: 채널 접속
+Caller <-> Callee: P2P 연결
 
-@enduml
+">
 
 이 웹앱은 `Caller`라는 사용자가 채널 생성이라는 버튼을 눌러 채널을 생성하면, `Callee`란 사용자가 해당 채널 번호를 확인하여 채널 입장을 하는 기능을 수행합니다.
 
