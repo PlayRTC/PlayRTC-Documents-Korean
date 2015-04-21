@@ -2,4 +2,5 @@ site_name: PlayRTC Documents
 theme: readthedocs
 pages:
 - [index.md, Home]
+- [hello-world.md, Hello PlayRTC!]
 - [about.md, About]
