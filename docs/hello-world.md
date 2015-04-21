@@ -3,11 +3,11 @@
 
 ## HTML 코딩
 HTML 코딩 시간입니다.
+
 - `playrtc.min.js` 라이브러리 파일 include
 - `<video>` 태그를 2개 생성
-- 자바스크립트로 PlayRTC 클래스의 인스턴스 생성 후
-- 그 클래스의 call 메소드 호출
-이 필요합니다. 다음의 샘플 코드를 직접 타이핑 내지 Copy & Paste 하면 코딩 완료 입니다. 이렇게 PlayRTC 서비스의 장점인 ‘Easy & Simple’ 입니다.
+
+자바스크립트로 PlayRTC 클래스의 인스턴스 생성 후 그 클래스의 call 메소드 호출 이 필요합니다. 다음의 샘플 코드를 직접 타이핑 내지 Copy & Paste 하면 코딩 완료 입니다. 이렇게 PlayRTC 서비스의 장점인 ‘Easy & Simple’ 입니다.
 
 ```html
 	<!DOCTYPE html>

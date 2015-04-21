@@ -4,3 +4,5 @@ pages:
 - [index.md, Home]
 - [hello-world.md, Hello PlayRTC!]
 - [about.md, About]
+- [dev-env.md, Development Environment]
+- [simple-video-chat.md, Tutorial - Simple Video Chat]
