@@ -1,0 +1,5 @@
+site_name: PlayRTC Documents
+theme: readthedocs
+pages:
+- [index.md, Home]
+- [about.md, About]
