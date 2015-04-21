@@ -1,5 +1,6 @@
 site_name: PlayRTC Documents
 theme: readthedocs
+theme_dir: 'custom_theme'
 pages:
 - [index.md, Home]
 - [hello-world.md, Hello PlayRTC!]
