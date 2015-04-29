@@ -13,8 +13,10 @@ PlayRTC의 문서 저장소.
 
 ## 체계
 - `master` 갈래에서 문서작성
-- [Read the Docs][Read the Docs]를 통해 빌드
+- [PlayRTC Github][PlayRTC Github]의 문서 저장소로 `push`
+- 연동된 [Read the Docs][Read the Docs]를 통해 빌드
 - http://playrtc.readthedocs.org/ko/latest/ 와 http://docs.playrtc.com/ 으로 배포
 
-[Read the Docs]: https://readthedocs.org/
 [MkDocs]: http://www.mkdocs.org/
+[PlayRTC Github]: https://github.com/playrtc
+[Read the Docs]: https://readthedocs.org/
