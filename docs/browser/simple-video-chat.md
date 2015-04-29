@@ -9,15 +9,17 @@
 예제앱을 다운로드 받거나 아래와 같이 PlayRTC의 Git 저장소 클론을 통해 준비합니다.
 
 - Windows :
-```dos
-c:\> cd %UserProfile%
-c:\> mkdir www
-c:\> cd www
-c:\> git clone https://github.com/playrtc/example-simple-chat-webapp
+
+```PowerShell
+PS> cd %UserProfile%
+PS> mkdir www
+PS> cd www
+PS> git clone https://github.com/playrtc/example-simple-chat-webapp
 ```
 
 - OSX, unix-like :
-```sh
+
+```Shell
 $ cd ~ && mkdir www && cd www
 $ git clone https://github.com/playrtc/example-simple-chat-webapp
 ```
@@ -25,13 +27,15 @@ $ git clone https://github.com/playrtc/example-simple-chat-webapp
 그리고, 다운로드 압축을 푼 디렉토리에서 명령 프롬프트/파워쉘/터미널을 실행시키고 다음과 같이 웹 서버를 실행 시킵니다.
 
 - Windows :
-```dos
-c:\> cd %UserProfile%/www
-c:\> harp server -p 8000
+
+```PowerShell
+PS> cd %UserProfile%/www
+PS> harp server -p 8000
 ```
 
 - OSX, unix-like :
-```sh
+
+```Shell
 $ cd ~/www && harp server -p 8000
 ```
 
@@ -46,17 +50,6 @@ $ cd ~/www && harp server -p 8000
 
 그러면, 기능과 함께 화면 구성을 살펴보고 사용해 봅시다.
 
-<img uml="
-actor Caller
-control PlayRTCServer
-actor Callee
-Caller -> PlayRTCServer: 채널 생성을 요청
-PlayRTCServer -> Caller: 채널 접속 및 생성된 채널의 ID를 알려줌
-Callee -> PlayRTCServer: 채널의 ID를 입력하고 채널 접속을 시도
-PlayRTCServer -> Callee: 채널 접속
-Caller <-> Callee: P2P 연결
-">
-
 이 웹앱은 `Caller`라는 사용자가 채널 생성이라는 버튼을 눌러 채널을 생성하면, `Callee`란 사용자가 해당 채널 번호를 확인하여 채널 입장을 하는 기능을 수행합니다.
 
 ![](DraggedImage-1.png)
@@ -69,10 +62,12 @@ Caller <-> Callee: P2P 연결
 - [Bootstrap - 생활코딩](http://opentutorials.org/course/477)
 
 HTML 마크업에는 다음과 같은 Video 태그가 있습니다.
+
 ```html
 <video class="remote-video center-block" id="callerRemoteVideo"></video>
 <video class="local-video pull-right" id="callerLocalVideo"></video>
 ```
+
 이 Video 태그는 실제로 `Caller`와 `Callee`의 얼굴 영상이 나타날 곳 입니다. 이 Video 태그에 PlayRTC 자바스크립트 라이브러리의 객체가 영상을 연결(bind)합니다. 자세한 내용은 아래의 자바스크립트 코드를 같이 살펴보며 알아보겠습니다.
 
 ### Caller
@@ -102,6 +97,7 @@ createChannelButton.addEventListener('click', function(e) {
 ```
 
 우선은 `use strict`을 통해 모던 자바스크립트의 엄격한 오류 검사 기능을 활용하도록 합니다. 이 문서의 모든 예제 자바스크립트는 엄격한(strict) 오류 검사에 맞추어 작성되어 있습니다.
+
 - [Strict 모드 - MSDN](https://msdn.microsoft.com/ko-kr/library/ie/br230269(v=vs.94).aspx)
 
 ```js
@@ -119,6 +115,7 @@ appCaller = new PlayRTC({
   remoteVideoTarget: "callerRemoteVideo"
 });
 ```
+
 appCaller란 이름으로 새로운 PlayRTC 객체(`new PlayRTC`)를 가리키도록 합니다. 새로운 PlayRTC 객체를 생성할때, 설정 [객체를 리터럴 형태](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Working_with_Objects#.EA.B0.9D.EC.B2.B4_.EC.83.9D.EC.84.B1.ED.95.98.EA.B8.B0)의 인수로 넣어 두어 각종 설정을 할 수 있습니다. [설정 객체](#)에는 PlayRTC 플렛폼에서 제공하는 프로젝트 키와 Caller와 Callee의 영상이 표출될 Video 태그를 지정해 줍니다.
 
 예제상의 프로젝트 키, `aee5f87e-c376-4f7e-b470-5c4ba725186d`는 개발용으로 공개된 것으로 잠깐의 테스트용도입니다. 만약 본격적으로 개발을 하거나 격리된 환경을 원한다면 [여기](https://developers.sktelecom.com/community/faq/)를 참고하여 자신만의 PlayRTC 프로젝트를 생성하고, 프로젝트 생성시 제공되는 프로젝트키를 이곳에 입력하면 됩니다.
@@ -144,6 +141,7 @@ createChannelButton.addEventListener('click', function(e) {
 
 `addEventListener`는 자바스크립트에서 이벤트를 다룰때 사용하는 기능입니다.
 - [addEventListener - 생활코딩](http://opentutorials.org/module/904/6761)
+
 `e.preventDefault();`는 폼에 기본적으로 적용된 브라우저 동작을 사용하지 않도록 하는 기능입니다.
 - [preventDefault - MDN](https://developer.mozilla.org/ko/docs/Web/API/Event/preventDefault)
 

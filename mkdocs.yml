@@ -1,9 +1,9 @@
 site_name: PlayRTC Documents
 theme: readthedocs
-theme_dir: 'custom_theme'
+# theme_dir: 'custom_theme'
 pages:
-- [index.md, Home]
-- [hello-world.md, Hello PlayRTC!]
-- [about.md, About]
-- [dev-env.md, Development Environment]
-- [simple-video-chat.md, Tutorial - Simple Video Chat]
+- ['index.md', 'Home']
+- ['concepts/about.md', 'Concepts', 'About']
+- ['browser/hello-world.md', 'Browser', 'Hello PlayRTC!']
+- ['browser/dev-env.md', 'Browser', 'Development Environment']
+- ['browser/simple-video-chat.md', 'Browser', 'Tutorial - Simple Video Chat']

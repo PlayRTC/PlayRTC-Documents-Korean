@@ -1,6 +1,6 @@
 # PlayRTC 문서 저장소
 PlayRTC의 문서 저장소.
-- [MkDocs](http://www.mkdocs.org/) 기반
+- [MkDocs][MkDocs] 기반
 - [Docker Documentation 저장소](https://github.com/docker/docker/tree/master/docs) 참고
 - [Read the Docs Theme](https://github.com/mkdocs/mkdocs/tree/master/mkdocs/themes/readthedocs) 테마 응용
 
@@ -13,5 +13,8 @@ PlayRTC의 문서 저장소.
 
 ## 체계
 - `master` 갈래에서 문서작성
-- Build/Depoly를 통해서 `gh-pages` 갈래로 발행
-- http://playrtc.github.io/PlayRTC-Docs/ 와 http://docs.playrtc.com/ 으로 배포
+- [Read the Docs][Read the Docs]를 통해 빌드
+- http://playrtc.readthedocs.org/ko/latest/ 와 http://docs.playrtc.com/ 으로 배포
+
+[Read the Docs]: https://readthedocs.org/
+[MkDocs]: http://www.mkdocs.org/
