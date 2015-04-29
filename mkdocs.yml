@@ -7,3 +7,7 @@ pages:
 - ['browser/hello-world.md', 'Browser', 'Hello PlayRTC!']
 - ['browser/dev-env.md', 'Browser', 'Development Environment']
 - ['browser/simple-video-chat.md', 'Browser', 'Tutorial - Simple Video Chat']
+# - ['browser/code-samples.md', 'Browser', 'Code Samples']
+- ['android/hello-world.md', 'Android', 'Hello PlayRTC!']
+- ['android/dev-env.md', 'Android', 'Development Environment']
+- ['android/simple-video-chat.md', 'Android', 'Tutorial - Simple Video Chat']
