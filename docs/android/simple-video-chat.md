@@ -79,7 +79,7 @@ PlayRTC SDK의 PlayRTCFactory Class의 newInstance 메소드를 이용하여 Pla
 보통의 소스 코드는 다음과 같습니다.
 
 Sample 소스의  com.playrtc.sample.handler.PlayRTCHandler 생성자 를 참고하세요.
-
+#############################
 ```Android
 /* PlayRTC 멤버 변수 */
 private PlayRTC playRTC = null;
@@ -146,6 +146,7 @@ android.setContext(this.getApplicationContext());
 
 PlayRTCSettings의 videoEnable과 audioEnable 메소드로  Boolean 값을 지정하며, 각 항목에 false를 설정하면 자신의 미디어 스트림은 상대에게 전송이 되지 않으나 상대방이 사용하도록 설정 한 경우에는 상대방의 미디어 스트림을 수신하게 됩니다.  SDK 서비스 설정에 정의한 값을 다음과 같이 재 지정 할 수 있습니다.
 
+#############################
 ```Android
 settings.setAudioEnable(true or false);   /* 음성 전송 사용 여부 */
 settings.setVideoEnable(true or false);   /* 영상 전송 사용 여부 */
