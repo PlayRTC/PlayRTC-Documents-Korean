@@ -2,6 +2,18 @@
 
 본 튜토리얼을 진행하려면 안드로이드용 PlayRTC SDK와 샘플을 다운로드받아야 합니다.
 
+## Android SDK 사용 환경
+
+PlayRTC SDK를 이용하기 위한 환경은 다음과 같습니다.
+
+- Android SDK: Android SDK Version 11 이상
+
+Application Project의 libs폴더에 다운로드받은 SDK 안에 포함된 library파일을 추가하고, Class-Path에 추가한 라이브러리를 등록합니다.
+
+- [PROJECT-ROOT]/libs/sktplayrtc-client.x.x.x.jar
+- [PROJECT-ROOT]/libs/libjingle_peerconnection.jar
+- [PROJECT-ROOT]/libs/armeabi-v7a/ibgingle_peerconnection_so.so
+
 ## SDK 사용을 위한 Application Manifest 작업
 
 Application Manifest에 아래와 같은 Permissions 항목 추가합니다.
@@ -67,16 +79,9 @@ PlayRTC SDK의 PlayRTCFactory Class의 newInstance 메소드를 이용하여 Pla
 보통의 소스 코드는 다음과 같습니다.
 
 Sample 소스의  com.playrtc.sample.handler.PlayRTCHandler 생성자 를 참고하세요.
-#############################
 ```Android
 /* PlayRTC 멤버 변수 */
 private PlayRTC playRTC = null;
-
-String svcSvrUrl = "http://서비스서버호스트:포트/restful";
-
-// 만약 서비스버서 RESTful API의 createChannel URL이
-// http://서비스서버호스트:포트/restful/v2/channels 이라면
-// 서비스 서버 RESTful 서비스 URL은 http://서비스서버호스트:포트/restful 이 됨
 
 /* PlayRTC 생성
 * - url String, 서비스 서버 URL
@@ -85,7 +90,7 @@ String svcSvrUrl = "http://서비스서버호스트:포트/restful";
 
 try {
 
-  this.playRTC = PlayRTCFactory.newInstance(svcSvrUrl, (PlayRTCObserver)new PlayRTCObserverImpl());
+  this.playRTC = PlayRTCFactory.newInstance((PlayRTCObserver)new PlayRTCObserverImpl());
 
 } catch (UnsupportedPlatformVersionException e) {
   // Android SDK 11 지원합니다.
@@ -130,14 +135,24 @@ PlayRTC SDK는 Android 단말기의 카메라 등 시스템 자원에 접근하�
 android.setContext(this.getApplicationContext());
 ```
 
+#### T-Developers 프로젝트 키 지정하기
+T-Developers에서 내 프로젝트를 위해 생성한 키를 지정합니다. 1.x버전에서는 서비스 서버에서 지정하던 부분이 2.x버전에서 서비스 서버가 제거됨으로써 클라이언트에 지정하도록 되어있습니다.
+
+```Android
+settings.setTDCProjcetID("나의 프로젝트 키");
+```
+
 #### 영상 및 음성 스트리밍 사용 설정
 
 PlayRTCSettings의 videoEnable과 audioEnable 메소드로  Boolean 값을 지정하며, 각 항목에 false를 설정하면 자신의 미디어 스트림은 상대에게 전송이 되지 않으나 상대방이 사용하도록 설정 한 경우에는 상대방의 미디어 스트림을 수신하게 됩니다.  SDK 서비스 설정에 정의한 값을 다음과 같이 재 지정 할 수 있습니다.
 
-#############################
 ```Android
 settings.setAudioEnable(true or false);   /* 음성 전송 사용 여부 */
 settings.setVideoEnable(true or false);   /* 영상 전송 사용 여부 */
+
+settings.video.setFrontCameraEnable(true);  /* 전면 카메라 사용 여부 */
+settings.video.setBackCameraEnable(true);   /* 후면 카메라 사용 여부 */
+
 ```
 
 #### 데이터 통신 스트림  사용 설정

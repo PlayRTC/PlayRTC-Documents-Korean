@@ -7,7 +7,7 @@
 
 `채널 생성 및 입장` 버튼을 누르면 브라우저 상단에 웹캠과 마이크 미디어 사용을 허용할 것인지 여부를 묻습니다. 프라이버시를 위해 절차이며 `허용` 버튼을 클릭하면, ‘Room(방)’이라 할 수 있는 설정된 Channel ID가 리턴되며 카메라로 내 모습이 보이게 됩니다!
 
-이제 1:1 영상/음성 대화를 시작해 보도록 하겠습니다. 위 페이지에서 생성된 Channel ID를 아래의 페이지에 `ChannelID를 입력하세요.`라고 적힌 Input 태그에 입력하고 `입장` 버튼을 누릅니다.
+이제 1:1 영상/음성 대화를 시작해 보도록 하겠습니다. 위 페이지에서 생성된 Channel ID를 아래의 페이지에 `ChannelID를 입력하세요.`라고 적힌 Input 태그에 입력하고 `채널 입장` 버튼을 누릅니다.
 
 <a class="jsbin-embed" href="http://jsbin.com/fegupesodi/3/embed?output">PlayRTC Hello World!</a>
 <script src="http://static.jsbin.com/js/embed.js"></script>

@@ -112,6 +112,31 @@ $ python -m SimpleHTTPServer 8000
 
 [Apache httpd][Apache httpd], [nginx][nginx], [IIS][IIS]와 같은 웹서버를 다룰줄 안다면 해당 웹서버를 사용해도 좋습니다.
 
+## PlayRTC Javascript SDK 준비
+PlayRTC Javascript의 SDK를 사용하는 방법은 크게 두가지가 있습니다.
+
+하나는 PlayRTC 서버에서 제공하는 버전을 사용하는것이고 다른 하나는 직접 다운로드 받아 사용하는 것 입니다.
+
+### PlayRTC 서버에서 제공하는 SDK 사용
+HTML 파일에 아래와 같은 코드를 삽입 함으로써 간단히 사용 가능합니다.
+
+```HTML
+<!-- 항상 최신 버전의 SDK를 사용합니다. -->
+
+<script src="http://www.playrtc.com/sdk/js/playrtc.min.js"></script>
+<script src="http://www.playrtc.com/sdk/js/playrtc.js"></script>
+
+<!-- 특정 버전의 SDK를 사용합니다. (e.g. v1.0.4) -->
+
+<script src="http://www.playrtc.com/sdk/js/1.0.4/playrtc.min.js"></script>
+<script src="http://www.playrtc.com/sdk/js/1.0.4/playrtc.js"></script>
+```
+
+### 직접 SDK 사용
+아래의 다운로드 링크를 통해 다운받아 사용합니다.
+
+- <http://www.playrtc.com/download/>
+
 ## 예제 앱 다운로드
 이제 예제앱을 다운로드 받고 준비 해 봅시다.
 
@@ -123,7 +148,7 @@ $ python -m SimpleHTTPServer 8000
 혹은 [PlayRTC GitHub][PlayRTC Github] 저장소에서 소스코드 관리 방식인 [git][git]을 통해 클론받을 수 있습니다.
 
 ```Shell
-$ git clone https://github.com/playrtc/example-simple-chat-webapp
+$ git clone https://github.com/playrtc/PlayRTC-Javascript-Tutorial-SimpleChat
 ```
 
 이로써 모든 튜토리얼을 개발하기 위한 모든 환경이 갖추어졌습니다. 다음장을 통해 본격적으로 영상/음성 웹앱을 만들어 보도록 하겠습니다.
