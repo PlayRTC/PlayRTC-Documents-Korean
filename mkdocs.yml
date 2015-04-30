@@ -3,14 +3,20 @@ theme: readthedocs
 # theme_dir: 'custom_theme'
 pages:
 - ['index.md', 'Home']
+- ['hello-world.md', 'Hello PlayRTC!']
+
 - ['concepts/about.md', 'Concepts', 'About']
-- ['browser/hello-world.md', 'Browser', 'Hello PlayRTC!']
+- ['concepts/migrate-1x-to-2x.md', 'Concepts', 'Migrate 1.x to 2.x']
+
+
 - ['browser/dev-env.md', 'Browser', 'Development Environment']
 - ['browser/simple-video-chat.md', 'Browser', 'Tutorial - Simple Video Chat']
+- ['browser/migrate-1x-to-2x.md', 'Browser', 'Migrate 1.x to 2.x']
 # - ['browser/code-samples.md', 'Browser', 'Code Samples']
-# - ['android/hello-world.md', 'Android', 'Hello PlayRTC!']
+
 - ['android/dev-env.md', 'Android', 'Development Environment']
 - ['android/simple-video-chat.md', 'Android', 'Tutorial - Simple Video Chat']
-# - ['ios/hello-world.md', 'iOS', 'Hello PlayRTC!']
+- ['android/migrate-1x-to-2x.md', 'Android', 'Migrate 1.x to 2.x']
+
 - ['ios/dev-env.md', 'iOS', 'Development Environment']
 - ['ios/simple-video-chat.md', 'iOS', 'Tutorial - Simple Video Chat']
