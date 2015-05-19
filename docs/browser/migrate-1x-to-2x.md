@@ -4,8 +4,8 @@
 다만, PlayRTC 객체를 생성하는 과정에서 설정이 일부 변경되었습니다. 서비스 서버가 없어짐으로써 서비스 서버에서 설정해 주었던 PlayRTC 프로젝트키를 클라이언트에서 설정해 주어야 합니다.
 
 아래와 같이 수정합니다.
-```Javasciprt
 
+```Javasciprt
 // 기존 1.x 코드
 app = new PlayRTC({
   url: 'http://myservice.com/api/'      //제거 사항

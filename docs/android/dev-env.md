@@ -18,6 +18,31 @@
 
 다운로드 받고 압축을 풀면 3개의 파일이 나오는데, 원하는 프로젝트에 다음과 같이 배치 하면 됩니다.
 
+### [안드로이드 스튜디오][Android Studio]에서 준비하기
+
+아래와 같이 SDK 파일을 배치 합니다.
+
+- [PROJECT-ROOT]/app/libs/sktplayrtc-client.x.x.x.jar
+- [PROJECT-ROOT]/app/libs/libjingle_peerconnection.jar
+- [PROJECT-ROOT]/app/src/main/jniLibs/libs/armeabi-v7a/ibgingle_peerconnection_so.so
+
+그리고 그래들 빌드 파일에 라이브러리를 지정하여 빌드시 삽입 하기 위해 `[PROJECT_ROOT]/app/build.gradle`파일이 아래와 같은지 확인합니다.
+
+~~~Gradle
+dependencies {
+    // 개별파일 지정
+    compile files('libs/libjingle_peerconnection.jar')
+    compile files('libs/sktplayrtc-client.2.0.0.jar')
+
+    // 혹은 디렉토리 전체를 지정
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+~~~
+
+### [Eclipse][Eclipse]에서 준비하기
+
+아래와 같이 SDK 파일을 배치 합니다.
+
 - [PROJECT-ROOT]/libs/sktplayrtc-client.x.x.x.jar
 - [PROJECT-ROOT]/libs/libjingle_peerconnection.jar
 - [PROJECT-ROOT]/libs/armeabi-v7a/ibgingle_peerconnection_so.so

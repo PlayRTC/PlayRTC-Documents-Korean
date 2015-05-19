@@ -1,19 +1,5 @@
 # 영상/음성 통화 안드로이드 앱 만들기
 
-본 튜토리얼을 진행하려면 안드로이드용 PlayRTC SDK와 샘플을 다운로드받아야 합니다.
-
-## Android SDK 사용 환경
-
-PlayRTC SDK를 이용하기 위한 환경은 다음과 같습니다.
-
-- Android SDK: Android SDK Version 11 이상
-
-Application Project의 libs폴더에 다운로드받은 SDK 안에 포함된 library파일을 추가하고, Class-Path에 추가한 라이브러리를 등록합니다.
-
-- [PROJECT-ROOT]/libs/sktplayrtc-client.x.x.x.jar
-- [PROJECT-ROOT]/libs/libjingle_peerconnection.jar
-- [PROJECT-ROOT]/libs/armeabi-v7a/ibgingle_peerconnection_so.so
-
 ## SDK 사용을 위한 Application Manifest 작업
 
 Application Manifest에 아래와 같은 Permissions 항목 추가합니다.
@@ -35,7 +21,7 @@ Application Manifest에 아래와 같은 Permissions 항목 추가합니다.
 <!-- PlayRTC SDK permission END -->
 ```
 
-## PlayRTC Application  주요 개발 단계
+## PlayRTC Application 주요 개발 단계
 
 com.sktelecom.playrtc.PlayRTC는 PlayRTC SDK에서 가장 중요한 Class입니다. PlayRTC 클래스를 이용하여 P2P 연결에 필요한 각종 작업을 수행하고 명령을 내립니다. 또한 PlayRTCObserver 인터페이스를 구현한 클래스를 등록하여 내부의 CallBack 이벤트를 처리할 수 있습니다. 아래는 PlayRTC 클래스를 이용하여 작업하게 될 대부분의 일을 간단하게 정리하였습니다.
 
@@ -79,27 +65,23 @@ PlayRTC SDK의 PlayRTCFactory Class의 newInstance 메소드를 이용하여 Pla
 보통의 소스 코드는 다음과 같습니다.
 
 Sample 소스의  com.playrtc.sample.handler.PlayRTCHandler 생성자 를 참고하세요.
+
 ```Android
 /* PlayRTC 멤버 변수 */
 private PlayRTC playRTC = null;
 
 /* PlayRTC 생성
-* - url String, 서비스 서버 URL
 * - playRTCObserver, PlayRTCOberver 인터페이스 구현 리스너
 */
 
 try {
-
   this.playRTC = PlayRTCFactory.newInstance((PlayRTCObserver)new PlayRTCObserverImpl());
-
 } catch (UnsupportedPlatformVersionException e) {
   // Android SDK 11 지원합니다.
   e.printStackTrace();
-
 } catch (RequiredParameterMissingException e) {
   // SERVICE_URL과 PlayRTCObserver 구현개체를 생성자에 전달해야 한다.
   e.printStackTrace();
-
 }
 ```
 
@@ -244,7 +226,6 @@ try {
   // application에서 사용하는 사용자 아이디를 지정
   peer.put("uid", USER_ID);
 
-
   // 사용자에 대한 별칭을 지정한다.
   peer.put("userName", USER_NAME);
 
@@ -252,16 +233,12 @@ try {
   .....
   parameters.put("peer", peer);
 } catch (JSONException e) {
-
   e.printStackTrace();
 }
 
 try {
-
   playRTC.createChannel(parameters);
-
 } catch (RequiredConfigMissingException e) {
-
   // application context가 없음
   e.printStackTrace();
 }
