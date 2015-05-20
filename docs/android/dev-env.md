@@ -41,6 +41,9 @@ dependencies {
 
 ### [Eclipse][Eclipse]에서 준비하기
 
+> 주의: 현재 Eclipse를 통한 안드로이드 개발은 더 이상 구글에서 지원하는 안드로이드 개발 방법이 아닙니다.
+> 가급적 안드로이드 스튜디오를 통해 개발하는것을 권장합니다.
+
 아래와 같이 SDK 파일을 배치 합니다.
 
 - [PROJECT-ROOT]/libs/sktplayrtc-client.x.x.x.jar
@@ -53,6 +56,7 @@ dependencies {
 예제앱은 아래를 통해 압축파일 형태로 다운로드 받을 수 있습니다.
 
 - <http://www.playrtc.com/download/>
+- <https://github.com/playrtc/>
 - <https://developers.sktelecom.com/develop/doc/sdk/>
 
 혹은 [PlayRTC GitHub][PlayRTC Github] 저장소에서 소스코드 관리 방식인 [git][git]을 통해 클론받을 수 있습니다.

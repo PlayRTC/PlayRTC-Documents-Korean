@@ -6,17 +6,17 @@
 아래와 같이 수정합니다.
 
 ```Javasciprt
-// 기존 1.x 코드
+// 1.x
 app = new PlayRTC({
-  url: 'http://myservice.com/api/'      //제거 사항
+  url: 'http://myservice.com/api/'      //REMOVED
   localVideoTarget: 'localVideo',
   remoteVideoTarget: 'remoteVideo'
 });
 
 
-// 2.x 코드
+// 2.x
 app = new PlayRTC({
-  projectKey: '나의 프로젝트 키',           //추가 사항
+  projectKey: 'MY PROJECT KEY',           //ADDED
   localVideoTarget: 'localVideo',
   remoteVideoTarget: 'remoteVideo'
 });

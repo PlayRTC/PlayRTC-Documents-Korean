@@ -143,6 +143,7 @@ HTML 파일에 아래와 같은 코드를 삽입 함으로써 간단히 사용 �
 예제앱은 아래를 통해 압축파일 형태로 다운로드 받을 수 있습니다.
 
 - <http://www.playrtc.com/download/>
+- <https://github.com/playrtc/>
 - <https://developers.sktelecom.com/develop/doc/sdk/>
 
 혹은 [PlayRTC GitHub][PlayRTC Github] 저장소에서 소스코드 관리 방식인 [git][git]을 통해 클론받을 수 있습니다.

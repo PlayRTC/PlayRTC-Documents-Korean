@@ -13,20 +13,20 @@
 // 1.x
 public class MainActivity extends Activity {
 
-	private static final String SERVICE_URL = "http://www.playrtc.com:5100";      // 제거사항
+	private static final String SERVICE_URL = "http://www.playrtc.com:5100";      // REMOVED
 
   private PlayRTCHandler createPlayRTCHandler(PlayRTCObserverImpl observer) {
     PlayRTCHandler handler = null;
-    handler = new PlayRTCHandler(this, SERVICE_URL, observer);                  // 변경사항(SERVICE_URL 제거)
+    handler = new PlayRTCHandler(this, SERVICE_URL, observer);                  // CHANGED (SERVICE_URL REMOVED)
     return handler;
   }
 }
 
-public PlayRTCHandler(MainActivity activity, String serviceUrl, PlayRTCObserver oberver) // 변경사항(String serviceUrl 제거)
+public PlayRTCHandler(MainActivity activity, String serviceUrl, PlayRTCObserver oberver) // CHANGED (String serviceUrl REMOVED)
   throws UnsupportedPlatformVersionException, RequiredParameterMissingException {
 
 	this.activity = activity;
-	this.playRTC = PlayRTCFactory.newInstance(serviceUrl, oberver);               // 변경사항(serviceUrl 제거)
+	this.playRTC = PlayRTCFactory.newInstance(serviceUrl, oberver);               // CHANGED (serviceUrl REMOVED)
 }
 
 public void setConfiguration() {
@@ -34,9 +34,9 @@ public void setConfiguration() {
   settings.android.setContext(activity.getApplicationContext());
 
   settings.setVideoEnable(true);
-  settings.setCamera('front');                                                  // 제거사항
+  settings.setCamera('front');                                                  // REMOVED
 
-  ...각종 설정...
+  ... something else ...
 }
 
 // 2.x
@@ -53,18 +53,18 @@ public PlayRTCHandler(MainActivity activity, PlayRTCObserver oberver)
   throws UnsupportedPlatformVersionException, RequiredParameterMissingException {
 
 	this.activity = activity;
-	this.playRTC = PlayRTCFactory.newInstance(oberver);                           // 변경사항(serviceUrl 제거)
+	this.playRTC = PlayRTCFactory.newInstance(oberver);                           // CHANGED (serviceUrl REMOVED)
 }
 
 public void setConfiguration() {
   PlayRTCSettings settings = playRTC.getSettings();
   settings.android.setContext(activity.getApplicationContext());
-  settings.setTDCProjcetID("60ba608a-e228-4530-8711-fa38004719c1");             // 추가사항
+  settings.setTDCProjcetID("60ba608a-e228-4530-8711-fa38004719c1");             // ADDED
 
   settings.setVideoEnable(true);
-  settings.video.setFrontCameraEnable(true);                                    // 추가사항
-  settings.video.setBackCameraEnable(true);                                     // 추가사항
+  settings.video.setFrontCameraEnable(true);                                    // ADDED
+  settings.video.setBackCameraEnable(true);                                     // ADDED
 
-  ...각종 설정...
+	... something else ...
 }
 ```
