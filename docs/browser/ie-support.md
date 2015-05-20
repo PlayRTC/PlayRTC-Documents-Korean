@@ -10,7 +10,7 @@ PlayRTC는 IE 브라우저에서도 WebRTC기술을 사용할 수 있도록 추�
 
 ## ActiveX 배포
 
-PlayRTC ActiveX는 `playrtc.com`으로 부터 다운로드 받을 수 있습니다. 현재는 `playrtc.com`에서만 ActiveX 파일을 배포하고 있습니다. 현재 ActiveX는 베타 버전으로 다음과 같이
+PlayRTC ActiveX는 `playrtc.com`으로 부터 다운로드 받을 수 있습니다. 현재는 `playrtc.com`에서만 ActiveX 파일을 배포하고 있습니다.
 
 ```
 app = new PlayRTC({

@@ -18,5 +18,5 @@ pages:
 - ['android/simple-video-chat.md', 'Android', 'Tutorial - Simple Video Chat']
 - ['android/migrate-1x-to-2x.md', 'Android', 'Migrate 1.x to 2.x']
 
-# - ['ios/dev-env.md', 'iOS', 'Development Environment']
-# - ['ios/simple-video-chat.md', 'iOS', 'Tutorial - Simple Video Chat']
+- ['ios/dev-env.md', 'iOS', 'Development Environment']
+- ['ios/simple-video-chat.md', 'iOS', 'Tutorial - Simple Video Chat']
