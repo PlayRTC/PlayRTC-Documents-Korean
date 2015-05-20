@@ -19,9 +19,6 @@ PlayRTC SDK에서 가장 중요한 Class입니다. PlayRTC 클래스를 이용�
 5. 연결수립 후 원격미디어스트림 출력
     - P2P연결 수립 후 상대방의 영상/음성 스트림을 제어를 위한 개체를 생성하여 PlayRTCObserver의 onAddRemoteStream을 통해 PlayRTCMedia인터페이스를 전달하며, 전달 받은 PlayRTCMedia에 영상 출력 뷰의 렌더러를 전달하여 영상을 출력하도록 해야 합니다.
 
-6. PlayRTC의 상태 변경 정보와 오류 정보 처리
-    - PlayRTC의 주요상태 변화와 오류 정보를 전달 받아 처리합니다.
-
 7. 상대방과의연결종료처리
     - PlayRTC의 disconnectChannel을 호출하여 채널에서 퇴장하거나 deleteChannel을 호출하여 채널을 종료하여 상대방과의 연결을 종료하도록합니다.
 
