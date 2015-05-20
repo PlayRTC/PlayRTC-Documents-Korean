@@ -6,7 +6,7 @@ iOS 개발을 하기 위해서는 기본적으로 맥 하드웨어와 OSX 운영
 
 애플계정 생성 및 [Xcode](Xcode) 설치는 아래의 애플 공식문서를 참고하여 생성 및 설치토록 합니다.
 
-- [Start Developing iOS Apps Today] (https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343)
+- [Start Developing iOS Apps Today](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343)
 
 설치를 완료했
 

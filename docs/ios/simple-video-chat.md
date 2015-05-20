@@ -258,8 +258,6 @@ Sample 예에서는 ViewController의 viewWillAppear에서 MainRTCViewController
 ```Objective-C
 // MainViewController.h
 - (void)viewWillAppear:(BOOL)animated {
-  NSLog(@"[%@] viewWillAppear", LOG_TAG);
-
   [super viewWillAppear:animated];
   CGRect bounds = self.view.bounds;
   [self initScreenLayoutView:bounds];
@@ -268,7 +266,6 @@ Sample 예에서는 ViewController의 viewWillAppear에서 MainRTCViewController
 #import "PlayRTCVideoView.h"
 
 - (void) initScreenLayoutView:(CGRect)frame {
-  NSLog(@"[%@] initScreenLayoutView...", LOG_TAG);
   CGRect bounds = frame;
   CGRect mainFrame = bounds;
   mainFrame.origin.y = 0;
@@ -299,8 +296,6 @@ Sample 예에서는 ViewController의 viewWillAppear에서 MainRTCViewController
 
 - (void) initVideoLayoutView:(UIView*)parent videoFrame:(CGRect)videoFrame
 {
-  NSLog(@"[%@] initVideoLayoutView...", LOG_TAG);
-
   CGRect bounds = videoFrame;
 
   self.remoteVideoView = [[PlayRTCVideoView alloc] initWithFrame:bounds];
