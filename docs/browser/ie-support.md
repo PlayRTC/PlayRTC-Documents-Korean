@@ -114,7 +114,7 @@ conn.getLocalMedia().recordStop();
 
 
 //IE 리모트 스트림 레코딩 시작
-conn.getRemoteMedia().record("C:\Users\P068850\Downloads\localVideo");
+conn.getRemoteMedia().record("C:\Users\P068850\Downloads\remoteVideo");
 //IE 리모트 스트림 레코딩 종료
 conn.getRemoteMedia().recordStop();
 ```
