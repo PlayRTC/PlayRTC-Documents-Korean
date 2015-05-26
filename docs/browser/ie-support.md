@@ -83,6 +83,7 @@ IE 에서도 역시 채널에 접속하는 방법은 동일합니다. 그러나 
 
 IE 버전과 일반 playrtc 버전은 거의 모든 인터페이스가 동일합니다. 이 곳에서는 그 중 인터페이스 사용법에 차이가 나는 레코드에 대해 설명합니다.
 
+##### 기존 레코딩 방법
 ```
 //기존 로컬 스트림 레코딩 시작
 conn.getMedia().record("video");
@@ -106,8 +107,10 @@ peer.getMedia().record("video");
 peer.getMedia().recordStop(function(blob){
      PlayRTC.utils.fileDownload(blob, 'remote-video.webm');
 });
+```
 
-
+##### IE 레코딩 방법
+```
 //IE 로컬 스트림 레코딩 시작
 conn.getLocalMedia().record("C:\Users\P068850\Downloads\localVideo");
 //IE 로컬 스트림 레코딩 종료
