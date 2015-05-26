@@ -68,8 +68,7 @@ if(PlayRTC.utils.browser.name === "ie"){
 
 conn = new PlayRTC({
      localVideoTarget: local,
-     remoteVideoTarget: remote,
-     cabUrl: "/cab"
+     remoteVideoTarget: remote
 });
 ```
 
