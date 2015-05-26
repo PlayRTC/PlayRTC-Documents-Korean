@@ -11,23 +11,23 @@ PlayRTC는 IE 브라우저에서도 WebRTC기술을 사용할 수 있도록 추�
 ## ActiveX 배포
 
 PlayRTC ActiveX는 `playrtc.com`으로 부터 다운로드 받을 수 있습니다. 현재는 `playrtc.com`에서만 ActiveX 파일을 배포하고 있습니다.
+playrtc.js 를 화면에 include 하여 playrtc 객체를 선언하면 자동으로 `playrtc.com` 에서 ActiveX 를 내려받아 설치합니다.
+
+
+## PlayRTC 객체 생성
 
 ```
 app = new PlayRTC({
      localVideoTarget: localStream_ie,
-     remoteVideoTarget: remoteStream_ie,
-     cabUrl: cab;
+     remoteVideoTarget: remoteStream_ie
 });
 ```
-
-## PlayRTC 객체 생성
 
 PlayRTC 객체 생성은 위에서 확인할 수 있었습니다. 여기서는 상세하게 크롬브라우저와 상호 통신 하기 위해서 PlayRTC 객체 생성시 무엇을 변경해야하는지 알아보겠습니다.
 
 - 명칭	설명
   - localVideoTarget	 WebRTC 가 지원되는 브라우저에서는 video 태그를 지정하던 것을 IE 에서는 div 를 지정하는 형태로 변경되었습니다.
   - remoteVideoTarget	 WebRTC 가 지원되는 브라우저에서는 video 태그를 지정하던 것을 IE 에서는 div 를 지정하는 형태로 변경되었습니다.
-  - cabUrl	 IE 에서 추가된 옵션으로 ActiveX 가 놓여 있는 경로를 지정합니다.
 
 localVideoTarget와 remoteVideoTarget 을 IE 까지 포함하려고 하면 약간의 코딩을 더 해주어야 합니다. 일단 HTML 코드의 변화입니다. HTML 은 playrtc.com 에서 배포하고 있는 sample 중 videochat.html 을 기준으로 변경하였습니다.
 
