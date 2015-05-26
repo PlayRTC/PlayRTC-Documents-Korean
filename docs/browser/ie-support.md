@@ -79,4 +79,42 @@ conn = new PlayRTC({
 
 IE 에서도 역시 채널에 접속하는 방법은 동일합니다. 그러나 채널에 접속하기 위해서는 크롬브라우저와 마찬가지로 웹 캠의 사용에 대한 허용 여부를 묻는 UI 가 생성됩니다. 여기에서 반드시 허용을 클릭해야만 정상적으로 채널을 접속하여 영상 통신을 준비할 수 있습니다.
 
-### IE와 그렇지 않은 페이지 동시 지원하기
+### 그 외 차이점
+
+IE 버전과 일반 playrtc 버전은 거의 모든 인터페이스가 동일합니다. 이 곳에서는 그 중 인터페이스 사용법에 차이가 나는 것에 대해 설명합니다.
+
+#### record
+```
+//기존 로컬 스트림 레코딩 시작
+conn.getMedia().record("video");
+//기존 로컬 스트림 레코딩 종료
+conn.getMedia().recordStop(function(blob){
+     PlayRTC.utils.fileDownload(blob, 'local-video.webm');
+});
+
+//기존 리모트 스트림 레코딩 시작
+conn.getAllPeer()[0].record("video");
+//기존 리모트 스트림 레코딩 종료
+conn.getAllPeer()[0].recordStop(function(blob){
+     PlayRTC.utils.fileDownload(blob, 'remote-video.webm');
+});
+
+//or
+var peer = conn.getPeerById("id");
+peer.getMedia().record("video");
+peer.getMedia().recordStop(function(blob){
+     PlayRTC.utils.fileDownload(blob, 'remote-video.webm');
+});
+
+
+//IE 로컬 스트림 레코딩 시작
+conn.getLocalMedia().record("C:\Users\P068850\Downloads\localVideo");
+//IE 로컬 스트림 레코딩 종료
+conn.getLocalMedia().recordStop();
+
+
+//IE 리모트 스트림 레코딩 시작
+conn.getRemoteMedia().record("C:\Users\P068850\Downloads\localVideo");
+//IE 리모트 스트림 레코딩 종료
+conn.getRemoteMedia().recordStop();
+```
