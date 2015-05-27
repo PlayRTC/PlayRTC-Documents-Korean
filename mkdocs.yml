@@ -11,6 +11,7 @@ pages:
 
 - ['browser/dev-env.md', 'Browser', 'Development Environment']
 - ['browser/simple-video-chat.md', 'Browser', 'Tutorial - Simple Video Chat']
+- ['browser/ie-support.md', 'Browser', 'Microsoft Internet Explorer Support']
 - ['browser/migrate-1x-to-2x.md', 'Browser', 'Migrate 1.x to 2.x']
 # - ['browser/code-samples.md', 'Browser', 'Code Samples']
 

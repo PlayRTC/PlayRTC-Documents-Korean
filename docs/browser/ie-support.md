@@ -9,6 +9,18 @@ Windows에 기본으로 설치되어 있는 Internet Explorer 브라우저는 �
 PlayRTC는 IE 브라우저에서도 WebRTC기술을 사용할 수 있도록 추가적인 ActiveX 플러그인을 제공하고 있습니다.
 
 
+## IE 지원 범위
+
+현재 PlayRTC의 IE 지원은 아래와 같습니다.
+
+- Windows 7 SP1 Home Premium, Professional, Ultimate
+  - IE 10
+  - IE 11
+- Windows 8.1, 8.1 Pro
+  - IE 10
+  - IE 11
+
+
 ## ActiveX 배포
 
 PlayRTC ActiveX는 `playrtc.com`으로 부터 다운로드 받을 수 있습니다. 현재는 `playrtc.com`에서만 ActiveX 파일을 배포하고 있습니다.
