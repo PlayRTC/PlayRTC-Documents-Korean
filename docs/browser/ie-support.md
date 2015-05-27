@@ -8,6 +8,7 @@ Windows에 기본으로 설치되어 있는 Internet Explorer 브라우저는 �
 
 PlayRTC는 IE 브라우저에서도 WebRTC기술을 사용할 수 있도록 추가적인 ActiveX 플러그인을 제공하고 있습니다.
 
+
 ## ActiveX 배포
 
 PlayRTC ActiveX는 `playrtc.com`으로 부터 다운로드 받을 수 있습니다. 현재는 `playrtc.com`에서만 ActiveX 파일을 배포하고 있습니다.
@@ -17,19 +18,7 @@ playrtc.js 를 화면에 include 하여 playrtc 객체를 선언하면 자동으
 
 ## PlayRTC 객체 생성
 
-```
-app = new PlayRTC({
-     localVideoTarget: localStreamIe,
-     remoteVideoTarget: remoteStreamIe
-});
-```
-
-PlayRTC 객체 생성은 위에서 확인할 수 있었습니다. 여기서는 상세하게 크롬브라우저와 상호 통신 하기 위해서 PlayRTC 객체 생성시 무엇을 변경해야하는지 알아보겠습니다.
-
-- localVideoTarget : WebRTC 가 지원되는 브라우저에서는 video 태그를 지정하던 것을 IE 에서는 div 를 지정하는 형태로 변경되었습니다.
-- remoteVideoTarget : WebRTC 가 지원되는 브라우저에서는 video 태그를 지정하던 것을 IE 에서는 div 를 지정하는 형태로 변경되었습니다.
-
-localVideoTarget와 remoteVideoTarget 을 IE 까지 포함하려고 하면 약간의 코딩을 더 해주어야 합니다. 우리가 Hello World 에서 실행 했던
+localVideoTarget와 remoteVideoTarget 을 IE 까지 포함하려고 하면 약간의 코딩을 더 해주어야 합니다. 우리가 Hello World 에서 실행 했던 코드를 기반으로 작성해 보도록 합니다.
 
 ```HTML
 <!DOCTYPE html>
@@ -116,11 +105,14 @@ localVideoTarget, remoteVideoTarget 옵션을 IE 의 경우 video 태그를 감�
 
 IE 에서도 역시 채널에 접속하는 방법은 동일합니다. 그러나 채널에 접속하기 위해서는 크롬브라우저와 마찬가지로 웹 캠의 사용에 대한 허용 여부를 묻는 UI 가 생성됩니다. 여기에서 반드시 허용을 클릭해야만 정상적으로 채널을 접속하여 영상 통신을 준비할 수 있습니다.
 
+
 ## 그 외 차이점
 
 IE 버전과 일반 playrtc 버전은 거의 모든 인터페이스가 동일합니다. 이 곳에서는 그 중 인터페이스 사용법에 차이가 나는 레코드에 대해 설명합니다.
 
+
 ### 기존 레코딩 방법
+
 ```
 // The local stream record
 app.getMedia().record("video");
@@ -138,6 +130,7 @@ app.getAllPeer()[0].recordStop(function(blob){
 ```
 
 ### IE 레코딩 방법
+
 ```Javasciprt
 // The IE local stream record
 app.getLocalMedia().record('%USERPROFILE%\Downloads\localVideo');
