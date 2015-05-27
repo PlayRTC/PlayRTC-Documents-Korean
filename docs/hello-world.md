@@ -36,9 +36,9 @@
 <body>
   <div>
 	  <label for="channelIdInput">Channel ID</label>
-		<input type="text" id="channelIdInput" placeholder="ChannelId를 입력하세요." value="">
-  	<button id="connectChannelButton">채널 입장</button>
-  	<button id="createChannelButton">채널 생성 및 입장</button>
+		<input type="text" id="channelIdInput" placeholder="Enter the channel ID" value="">
+  	<button id="connectChannelButton">Connect Channel</button>
+  	<button id="createChannelButton">Create and Connect Channel</button>
   </div>
 
   <video class="video" id="localVideo"></video>
