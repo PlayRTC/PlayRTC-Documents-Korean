@@ -59,8 +59,7 @@ PlayRTC 구현 객체를 생성한 후 PlayRTC의 getSettings() 메소드를 호
 다음과 같은 형태로 구현할 수 있습니다.
 
 ```Objective-C
-- (void)setConfiguration
-{
+- (void)setConfiguration {
     isClose = FALSE;
 
     PlayRTCSettings* settings = [self.playRTC getSettings];
@@ -139,7 +138,6 @@ createChannel 메소드를 호출하면 PlayRTC는 새로 생성한 채널의 id
     }
 
     [self.playRTC createChannel:parameters];
-
 }
 ```
 
@@ -229,8 +227,7 @@ createChannel, connectChannel을 호출하여 채널에 입장하면  PlayRTCObs
 다음과 같은 형태로 구현할 수 있습니다.
 
 ```Objective-C
--(void)onConnectChannel:(PlayRTC*)obj channelId:(NSString*)chId reason:(NSString*)reason
-{
+-(void)onConnectChannel:(PlayRTC*)obj channelId:(NSString*)chId reason:(NSString*)reason {
     self.channelId = chId;
     [(Sample1ViewController*)self.controller onConnectChannel:chId reason:reason];
 }
@@ -291,11 +288,10 @@ Sample 예에서는 ViewController의 viewWillAppear에서 MainRTCViewController
   [self initVideoLayoutView:videoAreaView videoFrame:videoAreaView.bounds];
   [mainAreaView addSubview:videoAreaView];
 
-  ... Something Else ...
+  ... something_else ...
 }
 
-- (void) initVideoLayoutView:(UIView*)parent videoFrame:(CGRect)videoFrame
-{
+- (void) initVideoLayoutView:(UIView*)parent videoFrame:(CGRect)videoFrame {
   CGRect bounds = videoFrame;
 
   self.remoteVideoView = [[PlayRTCVideoView alloc] initWithFrame:bounds];
@@ -452,7 +448,7 @@ deleteChannel을 호출하면 채널 서비스는 채널에 입장한 모든 사
   UIViewController* viewController = [self.navigationController popViewControllerAnimated:TRUE];
   viewController = nil;
 
-  // This needs a approval of the Apple App Store
+  // A below code needs a approval of the Apple App Store
   exit(0);
 }
 

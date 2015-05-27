@@ -36,7 +36,7 @@ public void setConfiguration() {
   settings.setVideoEnable(true);
   settings.setCamera('front');                                                  // REMOVED
 
-  ... something else ...
+  ... something_else ...
 }
 
 // 2.x
@@ -65,6 +65,6 @@ public void setConfiguration() {
   settings.video.setFrontCameraEnable(true);                                    // ADDED
   settings.video.setBackCameraEnable(true);                                     // ADDED
 
-	... something else ...
+	... something_else ...
 }
 ```
