@@ -56,10 +56,10 @@ localVideoTarget와 remoteVideoTarget 을 IE 까지 포함하려고 하면 약�
   	<button id="createChannelButton">Create and Connect Channel</button>
   </div>
 
-  <div class="my" id="localStreamIe">
+  <div class="video" id="localVideoIe">
     <video class="video" id="localVideo"></video>
   </div>
-  <div class="my" id="remoteStreamIe">
+  <div class="video" id="remoteVideoIe">
     <video class="video" id="remoteVideo"></video>
   </ie>
 
@@ -67,19 +67,19 @@ localVideoTarget와 remoteVideoTarget 을 IE 까지 포함하려고 하면 약�
 	<script>
     'use strict';
 
-    var local = 'localStream';
-    var remote = 'remoteStream';
+    var localVideoEl = 'localVideo';
+    var remoteVideoEl = 'remoteVideo';
     var app;
 
     if(PlayRTC.utils.browser.name === 'ie'){
-         local = 'localStreamIe';
-         remote = 'remoteStreamIe';
+      localVideoEl = 'localVideoIe';
+      remoteVideoEl = 'remoteVideoIe';
     }
 
   	app = new PlayRTC({
 			projectKey: '60ba608a-e228-4530-8711-fa38004719c1',
-			localVideoTarget: 'local',
-  	  remoteVideoTarget: 'remote'
+      localVideoTarget: localVideoEl,
+      remoteVideoTarget: remoteVideoEl
   	});
 
 		app.on('connectChannel', function(channelId) {
@@ -126,17 +126,15 @@ IE 버전과 일반 playrtc 버전은 거의 모든 인터페이스가 동일합
 
 ### 기존 레코딩 방법
 
-```
+```Javasciprt
 // The local stream record
-app.getMedia().record("video");
-
+app.getMedia().record('video');
 app.getMedia().recordStop(function(blob){
      PlayRTC.utils.fileDownload(blob, 'local-video.webm');
 });
 
 // The remote stream record
-app.getAllPeer()[0].record("video");
-
+app.getAllPeer()[0].record('video');
 app.getAllPeer()[0].recordStop(function(blob){
      PlayRTC.utils.fileDownload(blob, 'remote-video.webm');
 });
@@ -156,7 +154,15 @@ app.getRemoteMedia().recordStop();
 
 기존 local Stream 과 remote Stream 을 관장하는 객체를 얻는 방법은 각각 playrtc 객체와 playrtc 에 저장된 하위 peer 객체를 가져오는 형태였습니다. IE 에서는 이것이 playrtc 객체의 메소드인 `getLocalMedia` 와 `getRemoteMedia` 로 변경되었습니다.
 
-또한 기존 record 메소드는 무엇을 레코딩할지에 대한 인자를 문자열로 받습니다. 예를 들어 `conn.getMedia().record("video")` 혹은 `conn.getMedia().record("audio")` 와 같이 video 나 audio 를 인자로 받아 해당 미디어에 대해 레코딩을 진행합니다.
-IE 에서는 레코딩할 경로와 파일 이름을 full path 로 전달 받습니다. Audio 만 별도로 레코딩하는 방법은 별도로 제공하지 않고 video 만을 레코딩합니다.
+또한 기존 record 메소드는 무엇을 레코딩할지에 대한 인자를 문자열로 받습니다. 예를 들어 `conn.getMedia().record('video')` 혹은 `conn.getMedia().record('audio')` 와 같이 video 나 audio 를 인자로 받아 해당 미디어에 대해 레코딩을 진행합니다.
+IE 에서는 레코딩할 경로와 파일 이름을 full path 로 전달 받습니다. 현재는 소리만 별도로 레코딩하는 방법은 별도로 제공하지 않고 영상과 소리를 레코딩합니다.
 
 레코딩을 끝내는 방벙에도 차이가 있습니다. 기존의 recordStop 메소드는 함수를 인자로 넘겨 해당 함수의 인자로 취해지는 blob 을 저장하는 형태입니다. 허나 IE 에서는 단순히 recordStop 을 호출하여 레코딩을 중지합니다. 이렇게 레코딩을 중지하면 명시한 경로에 파일이 저장됩니다.
+
+레코딩 저장은 별도의 구현이 필요 없으며, 지정된 위치에 자동으로 저장됩니다. 이는 WebRTC의 데이터 저장은 메모리에 저장이 된 후 파일로 받는 과정이 필요하지만, PlayRTC에서 Windows 환경에 맞게 네이티브 구현은 대용량 파일에서도 무리가 없도록 곧바로 파일로 저장하기 때문입니다.
+
+## IE에서 PlayRTC ActiveX Plugin 삭제하기
+- 삭제
+  - Internet Explorer > 도구(Alt + x) > 추가 기능관리 > 도구 모음 및 확장 프로그램 > PlayRTC Class 더블클릭 > 제거
+- 확인
+  - `C:\Windows\Downloaded Program Files`
