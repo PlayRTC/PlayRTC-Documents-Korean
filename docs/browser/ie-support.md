@@ -16,6 +16,7 @@ PlayRTC는 IE 브라우저에서도 WebRTC기술을 사용할 수 있도록 추�
 - Windows 7 SP1 Home Premium, Professional, Ultimate
   - IE 10
   - IE 11
+
 - Windows 8.1, 8.1 Pro
   - IE 10
   - IE 11
