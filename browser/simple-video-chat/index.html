@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial - Simple Video Chat - PlayRTC Documents</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> PlayRTC Documents</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../hello-world/">Hello PlayRTC!</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Concepts</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/about/">About</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/migrate-1x-to-2x/">Migrate 1.x to 2.x</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Browser</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../dev-env/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Tutorial - Simple Video Chat</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">영상/음성 통화 웹앱 만들기</a></li>
+                
+                    <li><a class="toctree-l4" href="#_2">바로 실행해 보기</a></li>
+                
+                    <li><a class="toctree-l4" href="#_3">구성 살펴 보기</a></li>
+                
+                    <li><a class="toctree-l4" href="#_4">코드 살펴 보기</a></li>
+                
+                    <li><a class="toctree-l4" href="#_5">복습</a></li>
+                
+                    <li><a class="toctree-l4" href="#_6">마무리</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ie-support/">Microsoft Internet Explorer Support</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../migrate-1x-to-2x/">Migrate 1.x to 2.x</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Android</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../android/dev-env/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../android/simple-video-chat/">Tutorial - Simple Video Chat</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../android/migrate-1x-to-2x/">Migrate 1.x to 2.x</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>iOS</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../ios/dev-env/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../ios/simple-video-chat/">Tutorial - Simple Video Chat</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">PlayRTC Documents</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Browser &raquo;</li>
+        
+      
+    
+    <li>Tutorial - Simple Video Chat</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">영상/음성 통화 웹앱 만들기</h1>
+<p>개선된 PlayRTC 2.0 버전대의 SDK를 사용하면 HTML 파일 하나만 있어도 간단히 영상/음성 통화 웹앱을 만들 수 있습니다. 아래의 내용은 자바스크립트에 대한 매우 기초적인 이해를 필요로 합니다. 자바스크립트에 대해 좀 더 알아보고 싶으면, 아래를 참고 하세요.</p>
+<ul>
+<li><a href="http://opentutorials.org/course/743">자바스크립트 수업 - 생활코딩</a></li>
+</ul>
+<h2 id="_2">바로 실행해 보기</h2>
+<p>이전 장을 통해 필요한 환경을 갖춥니다.</p>
+<p>예제앱을 다운로드 받거나 아래와 같이 PlayRTC의 Git 저장소 클론을 통해 준비합니다.</p>
+<ul>
+<li>Windows :</li>
+</ul>
+<pre><code class="PowerShell">PS&gt; cd %UserProfile%
+PS&gt; mkdir www
+PS&gt; cd www
+PS&gt; git clone https://github.com/playrtc/example-simple-chat-webapp
+</code></pre>
+
+<ul>
+<li>OSX, unix-like :</li>
+</ul>
+<pre><code class="Shell">$ cd ~ &amp;&amp; mkdir www &amp;&amp; cd www
+$ git clone https://github.com/playrtc/example-simple-chat-webapp
+</code></pre>
+
+<p>그리고, 다운로드 압축을 푼 디렉토리에서 명령 프롬프트/파워쉘/터미널을 실행시키고 다음과 같이 웹 서버를 실행 시킵니다.</p>
+<ul>
+<li>Windows :</li>
+</ul>
+<pre><code class="PowerShell">PS&gt; cd %UserProfile%/www
+PS&gt; harp server -p 8000
+</code></pre>
+
+<ul>
+<li>OSX, unix-like :</li>
+</ul>
+<pre><code class="Shell">$ cd ~/www &amp;&amp; harp server -p 8000
+</code></pre>
+
+<p>이제 브라우저의 주소 입력란에 <code>http://localhost:8000/example-simple-chat-webapp/index.html</code>를 실행시키면 다음과 같은 화면이 나타나고 직접 웹앱을 실행 해 볼 수 있습니다.</p>
+<p><img alt="" src="../DraggedImage.png" /></p>
+<h2 id="_3">구성 살펴 보기</h2>
+<p>이 웹앱은 실제로는 <code>index.html</code>파일 하나로 이루어져 있습니다.</p>
+<p>영상/음성 통화를 하기위해 방을 만들고 만들어진 방에 참여하는데에 어떠한 서버 프로그래밍이나 복잡한 작업이 없이 간단한 html 파일 하나면 가능한 것 입니다!</p>
+<p>그러면, 기능과 함께 화면 구성을 살펴보고 사용해 봅시다.</p>
+<p>이 웹앱은 <code>Caller</code>라는 사용자가 채널 생성이라는 버튼을 눌러 채널을 생성하면, <code>Callee</code>란 사용자가 해당 채널 번호를 확인하여 채널 입장을 하는 기능을 수행합니다.</p>
+<p><img alt="" src="../DraggedImage-1.png" /></p>
+<p>여기서 채널이란, 이야기 방을 의미합니다. <code>Caller</code>와 <code>Callee</code>가 PlayRTC를 통해 통화 하기 위해서는 <code>Caller</code>가 직접 <code>Callee</code>에게 전화를 거는 것이 아닌 <code>Caller</code>가 PlayRTC 서버에 이야기방을 생성하고, 생성된 이야기 방의 식별자를 <code>Callee</code>에게 알려주면 <code>Callee</code>가 PlayRTC의 이야기 방에 접속하여 <code>Caller</code>와 통화를 할 수 있는 구성입니다.</p>
+<h2 id="_4">코드 살펴 보기</h2>
+<p>그러면 실재로 코드를 살펴 보도록 하겠습니다. HTML은 <a href="https://github.com/twitter">Twitter</a>의 <a href="http://bootstrapk.com/">Bootstrap</a>란 UI 프레임워크를 사용하고 있습니다. Bootstrap를 사용하면 간편하게 깔끔하고 웹표준과 모바일에 적합한 페이지를 만들 수 있습니다.</p>
+<ul>
+<li><a href="http://opentutorials.org/course/477">Bootstrap - 생활코딩</a></li>
+</ul>
+<p>HTML 마크업에는 다음과 같은 Video 태그가 있습니다.</p>
+<pre><code class="html">&lt;video class=&quot;remote-video center-block&quot; id=&quot;callerRemoteVideo&quot;&gt;&lt;/video&gt;
+&lt;video class=&quot;local-video pull-right&quot; id=&quot;callerLocalVideo&quot;&gt;&lt;/video&gt;
+</code></pre>
+
+<p>이 Video 태그는 실제로 <code>Caller</code>와 <code>Callee</code>의 얼굴 영상이 나타날 곳 입니다. 이 Video 태그에 PlayRTC 자바스크립트 라이브러리의 객체가 영상을 연결(bind)합니다. 자세한 내용은 아래의 자바스크립트 코드를 같이 살펴보며 알아보겠습니다.</p>
+<h3 id="caller">Caller</h3>
+<p>우선 Caller의 코드는 다음과 같습니다.</p>
+<pre><code class="js">'use strict';
+
+var createChannelButton = document.querySelector('#createChannel');
+var createChannelId = document.querySelector('#createChannelId');
+var appCaller;
+
+appCaller = new PlayRTC({
+  projectKey: &quot;aee5f87e-c376-4f7e-b470-5c4ba725186d&quot;,
+  localVideoTarget: &quot;callerLocalVideo&quot;,
+  remoteVideoTarget: &quot;callerRemoteVideo&quot;
+});
+
+appCaller.on('connectChannel', function(channelId) {
+  createChannelId.value = channelId;
+});
+
+createChannelButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  appCaller.createChannel();
+}, false);
+</code></pre>
+
+<p>우선은 <code>use strict</code>을 통해 모던 자바스크립트의 엄격한 오류 검사 기능을 활용하도록 합니다. 이 문서의 모든 예제 자바스크립트는 엄격한(strict) 오류 검사에 맞추어 작성되어 있습니다.</p>
+<ul>
+<li><a href="https://msdn.microsoft.com/ko-kr/library/ie/br230269(v=vs.94).aspx">Strict 모드 - MSDN</a></li>
+</ul>
+<pre><code class="js">var createChannelButton = document.querySelector('#createChannel');
+var createChannelId = document.querySelector('#createChannelId');
+</code></pre>
+
+<p>이 세줄의 코드는 UI상의 버튼과 Input 폼 DOM을 가리키고 있습니다. 이제 이 UI요소에 이벤트를 부여하여 사용자가 버튼(<code>createChannelButton</code>)을 클릭하면, 서버에 채널을 만들어 줄것을 요청하고, 만들어진 채널의 방 번호를 Input 폼(<code>createChannelId</code>) 안에 넣도록 해 보겠습니다.</p>
+<pre><code class="js">var appCaller;
+appCaller = new PlayRTC({
+  projectKey: &quot;aee5f87e-c376-4f7e-b470-5c4ba725186d&quot;,
+  localVideoTarget: &quot;callerLocalVideo&quot;,
+  remoteVideoTarget: &quot;callerRemoteVideo&quot;
+});
+</code></pre>
+
+<p>appCaller란 이름으로 새로운 PlayRTC 객체(<code>new PlayRTC</code>)를 가리키도록 합니다. 새로운 PlayRTC 객체를 생성할때, 설정 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Working_with_Objects#.EA.B0.9D.EC.B2.B4_.EC.83.9D.EC.84.B1.ED.95.98.EA.B8.B0">객체를 리터럴 형태</a>의 인수로 넣어 두어 각종 설정을 할 수 있습니다. <a href="#">설정 객체</a>에는 PlayRTC 플렛폼에서 제공하는 프로젝트 키와 Caller와 Callee의 영상이 표출될 Video 태그를 지정해 줍니다.</p>
+<p>예제상의 프로젝트 키, <code>aee5f87e-c376-4f7e-b470-5c4ba725186d</code>는 개발용으로 공개된 것으로 잠깐의 테스트용도입니다. 만약 본격적으로 개발을 하거나 격리된 환경을 원한다면 <a href="https://developers.sktelecom.com/community/faq/">여기</a>를 참고하여 자신만의 PlayRTC 프로젝트를 생성하고, 프로젝트 생성시 제공되는 프로젝트키를 이곳에 입력하면 됩니다.</p>
+<ul>
+<li><a href="https://developers.sktelecom.com/community/faq/">T Developers 프로젝트 생성 및 키 발급 방법</a></li>
+</ul>
+<pre><code class="js">appCaller.on('connectChannel', function(channelId) {
+  createChannelId.value = channelId;
+});
+
+createChannelButton.addEventListener('click', function(e) {
+  e.preventDefault();  //폼에 적용된 브라우저 동작을 사용하지 않음
+  appCaller.createChannel();
+}, false);
+</code></pre>
+
+<p>실질적인 작동 기능이 담겨있는 코드 입니다. PlayRTC 자바스크립트 라이브러리는 자바스크립트 사용 방식중 널리 사용되고 있는 <a href="http://ko.wikipedia.org/wiki/%EC%9D%B4%EB%B2%A4%ED%8A%B8_(%EC%BB%B4%ED%93%A8%ED%8C%85)">이벤트 중심(event driven)</a>으로 사용하게 되어 있습니다.</p>
+<p><code>PlayRTC</code>의 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">인스턴스 객체</a>인 <code>appCaller</code>의 내장 기능중 이벤트를 다루는 <code>on</code>을 사용하여 <code>connectChannel</code>이벤트가 발생했으때, <code>connectChannel</code>이벤트의 결과물인 <code>channelID</code>를 <code>Input 폼(createChannelId)</code>에 넣어 사용자가 지금 만들어지고 접속한 채널의 ID를 알 수 있도록 합니다.</p>
+<p><code>채널생성(createChannelButton)버튼</code>을 클릭하면, 좀전에 생성한 appCaller객체를 통해 서버로 채널을 만들것을 요청합니다. 그리고 성공적으로 채널이 생성되면 자동으로 서버의 채널에 접속하게 되고 이때 채널 번호를 <code>Input 폼(createChannelId)</code>에 넣도록 하는 코드입니다.</p>
+<p><code>addEventListener</code>는 자바스크립트에서 이벤트를 다룰때 사용하는 기능입니다.
+- <a href="http://opentutorials.org/module/904/6761">addEventListener - 생활코딩</a></p>
+<p><code>e.preventDefault();</code>는 폼에 기본적으로 적용된 브라우저 동작을 사용하지 않도록 하는 기능입니다.
+- <a href="https://developer.mozilla.org/ko/docs/Web/API/Event/preventDefault">preventDefault - MDN</a></p>
+<h3 id="callee">Callee</h3>
+<pre><code class="js">'use strict';
+
+var connectChannelId = document.querySelector('#connectChannelId');
+var connectChannelButton = document.querySelector('#connectChannel');
+var appCallee;
+
+appCallee = new PlayRTC({
+  projectKey: &quot;aee5f87e-c376-4f7e-b470-5c4ba725186d&quot;,
+  localVideoTarget: &quot;calleeLocalVideo&quot;,
+  remoteVideoTarget: &quot;calleeRemoteVideo&quot;
+});
+
+connectChannelButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  var channelId = connectChannelId.value;
+  if (!channelId) { return };
+  appCallee.connectChannel(channelId);
+}, false);
+</code></pre>
+
+<p><code>Callee</code>의 코드 대부분은 앞에서 설명한 바와 같습니다.</p>
+<p>사용자가 접속하고자 하는 채널의 ID를 Input 폼(<code>connectChnnelID</code>)에 입력하고 <code>채널 입장</code>버튼(<code>connectChannelButton</code>)을 클릭하면 <code>PlayRTC</code>의 인스턴스 객체인 <code>appCallee</code>의 <code>connectChannel</code>기능을 통해 서버에 있는 채널로 접속합니다.</p>
+<p>이때, Input 폼(<code>connectChnnelID</code>)이 비어있을 경우 <code>appCallee.connectChannel</code>을 호출하면 비어있는 값으로 채널에 접속하려 시도하기때문에 오류가 발생합니다. 이 오류가 발생하는 것을 막기 위해서 Input 폼이 비어있으면 정의되지 않은 값(<code>undefined</code>)을 반환(<code>return</code>)하여 다음 행의 명령인 채널 접속 시도를 하지 않게 됩니다.</p>
+<ul>
+<li><a href="http://bonsaiden.github.io/JavaScript-Garden/ko/#core.undefined">undefined와 null - 자바스크립트 가든</a></li>
+</ul>
+<p><code>Callee</code>의 코드도 실질적으로 <code>Caller</code>의 코드와 크게 다르지 않습니다. 사실상 <code>Caller</code>가 <code>Callee</code>가 될수도 있고 <code>Callee</code>가 <code>Caller</code>도 될수 있지만 여기서는 전체적인 흐름을 간단히 설명하기 위해 이렇게 분리 해 놓았습니다.</p>
+<h2 id="_5">복습</h2>
+<p>단순한 코드이지만 한편으로 처음 사용해 보는 개발자를 위해 차근차근 살펴 보았습니다. 이 코드를 살펴보면서 다루어진 PlayRTC의 주요 개념에 대해 다시한번 살펴 보겠습니다.</p>
+<ul>
+<li>PlayRTC 자바스크립트 라이브러리는 이벤트 중심의 구성을 가진다.<ul>
+<li>따라서 “버튼을 누를때”, “채널을 만들때”와 같이 특정한 순간을 중심으로 구성을 하면 한결 수월하게 작성이 가능합니다.</li>
+</ul>
+</li>
+<li>PlayRTC 서버는 채널이라는 방 개념을 가지고 있고 매우 중요하다.<ul>
+<li>사용자(Peer)와 사용자(Peer)가 만나기 위해서는 PlayRTC서버의 채널을 통해 중계(Signaling) 합니다.</li>
+<li>“상대방의 e-mail과 같은 ID를 통해 전화하기”, “홈페이지에 PlayRTC로 상담요청하기”등 좀더 다양한 기능 구성을 갖는 서비스를 만들려면 채널과 채널의 접속상태인 세션을 동적으로 다루는 역할이 필요합니다. 이 채널을 어떻게 다루느냐에 따라 다양한 기능과 상황의 서비스를 만들 수 있는 것 입니다. 이 부분은 별도의 문서를 통해 살펴보겠습니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">마무리</h2>
+<p>이렇게 간단하게 영상/음성 통화 웹앱을 만들어 보았습니다. 아주 쉽죠? WebRTC를 사용하는데 필요한 복잡한 내용은 PlayRTC에 맞기고, 멋지고 세련된 서비스를 만드는데 집중하세요! PlayRTC는 쉽고 편리하게 영상/음성 커뮤니케이션 기능을 제공합니다.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ie-support/" class="btn btn-neutral float-right" title="Microsoft Internet Explorer Support"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../dev-env/" class="btn btn-neutral" title="Development Environment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../dev-env/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ie-support/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

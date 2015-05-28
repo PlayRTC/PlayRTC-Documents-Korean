@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Development Environment - PlayRTC Documents</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> PlayRTC Documents</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../hello-world/">Hello PlayRTC!</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Concepts</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/about/">About</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../concepts/migrate-1x-to-2x/">Migrate 1.x to 2.x</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Browser</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../browser/dev-env/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../browser/simple-video-chat/">Tutorial - Simple Video Chat</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../browser/ie-support/">Microsoft Internet Explorer Support</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../browser/migrate-1x-to-2x/">Migrate 1.x to 2.x</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Android</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Development Environment</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">개발 환경 구성</a></li>
+                
+                    <li><a class="toctree-l4" href="#ide">IDE 준비</a></li>
+                
+                    <li><a class="toctree-l4" href="#playrtc-android-sdk">PlayRTC Android SDK 준비하기</a></li>
+                
+                    <li><a class="toctree-l4" href="#_3">예제 앱 다운로드</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../simple-video-chat/">Tutorial - Simple Video Chat</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../migrate-1x-to-2x/">Migrate 1.x to 2.x</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>iOS</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../ios/dev-env/">Development Environment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../ios/simple-video-chat/">Tutorial - Simple Video Chat</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">PlayRTC Documents</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Android &raquo;</li>
+        
+      
+    
+    <li>Development Environment</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">개발 환경 구성</h1>
+<h2 id="ide">IDE 준비</h2>
+<p>안드로이드를 개발하기 위한 기본적인 준비가 필요합니다.</p>
+<p>안드로이드 플렛폼을 만든 구글에서 권장하는 <a href="https://developer.android.com/intl/ko/sdk/index.html">안드로이드 스튜디오</a>나 Java 언어 개발에 널리 사용하는 <a href="http://eclipse.org/">Eclipse</a>를 준비하면 됩니다.</p>
+<p><a href="http://eclipse.org/">Eclipse</a>의 경우 기본 설치 후 안드로이드 개발 환경을 구성하려면 약간의 단계가 더 필요한데 다음을 통해 준비토록 합니다.</p>
+<ul>
+<li><a href="https://developer.android.com/intl/ko/sdk/installing/index.html?pkg=tools">Installing the Stand-alone SDK Tools</a></li>
+</ul>
+<p>첫 개발을 시작한다면 안드로이드 플렛폼 개발의 표준 도구인 <a href="https://developer.android.com/intl/ko/sdk/index.html">안드로이드 스튜디오</a>를 사용할것을 권장 합니다.</p>
+<h2 id="playrtc-android-sdk">PlayRTC Android SDK 준비하기</h2>
+<p>아래의 링크를 통해 다운로드 받습니다.</p>
+<ul>
+<li><a href="http://www.playrtc.com/download/">http://www.playrtc.com/download/</a></li>
+</ul>
+<p>다운로드 받고 압축을 풀면 3개의 파일이 나오는데, 원하는 프로젝트에 다음과 같이 배치 하면 됩니다.</p>
+<h3 id="_2"><a href="https://developer.android.com/intl/ko/sdk/index.html">안드로이드 스튜디오</a>에서 준비하기</h3>
+<p>아래와 같이 SDK 파일을 배치 합니다.</p>
+<ul>
+<li>[PROJECT-ROOT]/app/libs/sktplayrtc-client.x.x.x.jar</li>
+<li>[PROJECT-ROOT]/app/libs/libjingle_peerconnection.jar</li>
+<li>[PROJECT-ROOT]/app/src/main/jniLibs/libs/armeabi-v7a/ibgingle_peerconnection_so.so</li>
+</ul>
+<p>그리고 그래들 빌드 파일에 라이브러리를 지정하여 빌드시 삽입 하기 위해 <code>[PROJECT_ROOT]/app/build.gradle</code>파일이 아래와 같은지 확인합니다.</p>
+<pre><code class="Gradle">dependencies {
+    // 개별파일 지정
+    compile files('libs/libjingle_peerconnection.jar')
+    compile files('libs/sktplayrtc-client.2.0.0.jar')
+
+    // 혹은 디렉토리 전체를 지정
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+</code></pre>
+
+<h3 id="eclipse"><a href="http://eclipse.org/">Eclipse</a>에서 준비하기</h3>
+<blockquote>
+<p>주의: 현재 Eclipse를 통한 안드로이드 개발은 더 이상 구글에서 지원하는 안드로이드 개발 방법이 아닙니다.
+가급적 안드로이드 스튜디오를 통해 개발하는것을 권장합니다.</p>
+</blockquote>
+<p>아래와 같이 SDK 파일을 배치 합니다.</p>
+<ul>
+<li>[PROJECT-ROOT]/libs/sktplayrtc-client.x.x.x.jar</li>
+<li>[PROJECT-ROOT]/libs/libjingle_peerconnection.jar</li>
+<li>[PROJECT-ROOT]/libs/armeabi-v7a/ibgingle_peerconnection_so.so</li>
+</ul>
+<h2 id="_3">예제 앱 다운로드</h2>
+<p>이제 예제앱을 다운로드 받고 준비 해 봅시다.</p>
+<p>예제앱은 아래를 통해 압축파일 형태로 다운로드 받을 수 있습니다.</p>
+<ul>
+<li><a href="http://www.playrtc.com/download/">http://www.playrtc.com/download/</a></li>
+<li><a href="https://github.com/playrtc/">https://github.com/playrtc/</a></li>
+<li><a href="https://developers.sktelecom.com/develop/doc/sdk/">https://developers.sktelecom.com/develop/doc/sdk/</a></li>
+</ul>
+<p>혹은 <a href="https://github.com/playrtc">PlayRTC GitHub</a> 저장소에서 소스코드 관리 방식인 <a href="http://git-scm.com/">git</a>을 통해 클론받을 수 있습니다.</p>
+<pre><code class="Shell">$ git clone https://github.com/playrtc/PlayRTC-Android-Tutorial-SimpleChat
+</code></pre>
+
+<p>이로써 모든 튜토리얼을 개발하기 위한 모든 환경이 갖추어졌습니다. 다음장을 통해 본격적으로 영상/음성 웹앱을 만들어 보도록 하겠습니다.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../simple-video-chat/" class="btn btn-neutral float-right" title="Tutorial - Simple Video Chat"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../browser/migrate-1x-to-2x/" class="btn btn-neutral" title="Migrate 1.x to 2.x"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../browser/migrate-1x-to-2x/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../simple-video-chat/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
