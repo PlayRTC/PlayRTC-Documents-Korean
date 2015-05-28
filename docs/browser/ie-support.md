@@ -21,12 +21,12 @@ PlayRTC는 IE 브라우저에서도 WebRTC기술을 사용할 수 있도록 추�
   - IE 10
   - IE 11
 
+## IE 지원
+
 
 ## ActiveX 배포
 
-PlayRTC ActiveX는 `playrtc.com`으로 부터 다운로드 받을 수 있습니다. 현재는 `playrtc.com`에서만 ActiveX 파일을 배포하고 있습니다.
-
-playrtc.js 를 화면에 include 하여 playrtc 객체를 선언하면 자동으로 `playrtc.com` 에서 ActiveX 를 내려받아 설치합니다.
+PlayRTC ActiveX 플러그인은 `playrtc.com`으로 부터 다운로드 받습니다. 별도의 설정없이 IE를 지원하는 버전의`playrtc.js`를 불러들이고  `playrtc`객체를 생성하는 순간 ActiveX 플러그인 설치 여부를 사용자에게 묻고 사용자가 허용한다면 `playrtc.com`에서 ActiveX 플러그인을 내려받아 설치하게 됩니다.
 
 
 ## PlayRTC 객체 생성
@@ -162,7 +162,9 @@ IE 에서는 레코딩할 경로와 파일 이름을 full path 로 전달 받습
 레코딩 저장은 별도의 구현이 필요 없으며, 지정된 위치에 자동으로 저장됩니다. 이는 WebRTC의 데이터 저장은 메모리에 저장이 된 후 파일로 받는 과정이 필요하지만, PlayRTC에서 Windows 환경에 맞게 네이티브 구현은 대용량 파일에서도 무리가 없도록 곧바로 파일로 저장하기 때문입니다.
 
 ## IE에서 PlayRTC ActiveX Plugin 삭제하기
+
 - 삭제
-  - Internet Explorer > 도구(Alt + x) > 추가 기능관리 > 도구 모음 및 확장 프로그램 > PlayRTC Class 더블클릭 > 제거
-- 확인
+  - Internet Explorer > 도구(Alt + x) > 추가 기능관리 > 도구 모음 및 확장 프로그램 > PlayRTC Class > 추가정보 > 제거
+- 삭제 확인
+  - 아래의 폴더에 `ATPlayRTC.dll`, `PlayRTC.dll`, `PlayRTC.inf` 파일이 없으면 성공적으로 제거가 된 상태입니다.
   - `C:\Windows\Downloaded Program Files`

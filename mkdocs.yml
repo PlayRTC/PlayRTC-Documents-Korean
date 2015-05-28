@@ -2,22 +2,25 @@ site_name: PlayRTC Documents
 theme: readthedocs
 # theme_dir: 'custom_theme'
 pages:
-- ['index.md', 'Home']
-- ['hello-world.md', 'Hello PlayRTC!']
+- Home: 'index.md'
+- Hello PlayRTC! : 'hello-world.md'
 
-- ['concepts/about.md', 'Concepts', 'About']
-- ['concepts/migrate-1x-to-2x.md', 'Concepts', 'Migrate 1.x to 2.x']
+- Concepts:
+  - 'About': 'concepts/about.md'
+  - 'Migrate 1.x to 2.x': 'concepts/migrate-1x-to-2x.md'
 
+- Browser:
+  - 'Development Environment': 'browser/dev-env.md'
+  - 'Tutorial - Simple Video Chat': 'browser/simple-video-chat.md'
+  - 'Microsoft Internet Explorer Support': 'browser/ie-support.md'
+  - 'Migrate 1.x to 2.x': 'browser/migrate-1x-to-2x.md'
+  # - 'Code Samples': 'browser/code-samples.md'
 
-- ['browser/dev-env.md', 'Browser', 'Development Environment']
-- ['browser/simple-video-chat.md', 'Browser', 'Tutorial - Simple Video Chat']
-- ['browser/ie-support.md', 'Browser', 'Microsoft Internet Explorer Support']
-- ['browser/migrate-1x-to-2x.md', 'Browser', 'Migrate 1.x to 2.x']
-# - ['browser/code-samples.md', 'Browser', 'Code Samples']
+- Android:
+  - 'Development Environment': 'android/dev-env.md'
+  - 'Tutorial - Simple Video Chat': 'android/simple-video-chat.md'
+  - 'Migrate 1.x to 2.x': 'android/migrate-1x-to-2x.md'
 
-- ['android/dev-env.md', 'Android', 'Development Environment']
-- ['android/simple-video-chat.md', 'Android', 'Tutorial - Simple Video Chat']
-- ['android/migrate-1x-to-2x.md', 'Android', 'Migrate 1.x to 2.x']
-
-- ['ios/dev-env.md', 'iOS', 'Development Environment']
-- ['ios/simple-video-chat.md', 'iOS', 'Tutorial - Simple Video Chat']
+- iOS:
+  - 'Development Environment': 'ios/dev-env.md'
+  - 'Tutorial - Simple Video Chat': 'ios/simple-video-chat.md'
