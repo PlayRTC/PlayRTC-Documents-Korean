@@ -24,9 +24,9 @@ PlayRTC의 문서 저장소.
 - Github pages
   - `master` 갈래에서 문서작성
   - `mkdocs gh-pages` 실행
-  - http://playrtc.github.io/PlayRTC-Documents/ 로 배포
+  - http://playrtc.github.io/PlayRTC-Documents-Korean/ 로 배포
 
 [MkDocs]: http://www.mkdocs.org/
 [PlayRTC Github]: https://github.com/playrtc
 [Read the Docs]: https://readthedocs.org/
-[PlayRTC Google Drive for Diagram]: https://drive.google.com/drive/u/1/folders/0B4KbhsuI_9DIdWlMc0hhckpvcGc/0B4qm2JzFaK41fkxXbFZXcmM1dm1wNlpzZzkxMWd6VlNaRVYxVnZ6bDNyQlhHMU9JVFRaSDg
+[PlayRTC Google Drive for Diagram]:https://drive.google.com/drive/u/1/folders/0B4KbhsuI_9DIdWlMc0hhckpvcGc/0B4qm2JzFaK41fkxXbFZXcmM1dm1wNlpzZzkxMWd6VlNaRVYxVnZ6bDNyQlhHMU9JVFRaSDg
