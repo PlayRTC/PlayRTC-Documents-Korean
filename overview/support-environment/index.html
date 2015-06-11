@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Migrate 1.x to 2.x - PlayRTC Documents</title>
+  <title>Support Environment - PlayRTC Documents</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -20,7 +20,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Migrate 1.x to 2.x";
+    var mkdocs_page_name = "Support Environment";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -70,63 +70,76 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../overview/about/">About</a>
+        <a class="" href="../about/">About</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../overview/architecture/">Architecture</a>
+        <a class="" href="../architecture/">Architecture</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../overview/project-key/">Project Key</a>
+        <a class="" href="../project-key/">Project Key</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Support Environment</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#playrtc-support-environment">PlayRTC Support Environment</a></li>
+                
+                    <li><a class="toctree-l4" href="#browser-support">Browser Support</a></li>
+                
+                    <li><a class="toctree-l4" href="#sdk-support">SDK Support</a></li>
+                
+                    <li><a class="toctree-l4" href="#codec-support">Codec Support</a></li>
+                
+            
+            </ul>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../overview/support-environment/">Support Environment</a>
+        <a class="" href="../feature-map/">Feature Map</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../overview/feature-map/">Feature Map</a>
+        <a class="" href="../faq/">Frequently Asked Questions</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../overview/faq/">Frequently Asked Questions</a>
+        <a class="" href="../glossary/">Glossary</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../overview/glossary/">Glossary</a>
+        <a class="" href="../troubleshooting/">Trouble Shooting</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../overview/troubleshooting/">Trouble Shooting</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../overview/migrate-1x-to-2x/">Migrate 1.x to 2.x</a>
+        <a class="" href="../migrate-1x-to-2x/">Migrate 1.x to 2.x</a>
         
     </li>
 
@@ -141,35 +154,28 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../dev-env/">Development Environment</a>
+        <a class="" href="../../browser/dev-env/">Development Environment</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../simple-video-chat/">Tutorial - Simple Video Chat</a>
+        <a class="" href="../../browser/simple-video-chat/">Tutorial - Simple Video Chat</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../ie-support/">Microsoft Internet Explorer Support</a>
+        <a class="" href="../../browser/ie-support/">Microsoft Internet Explorer Support</a>
         
     </li>
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Migrate 1.x to 2.x</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#1x-2x">1.x 에서 2.x로 마이그레이션 하기</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../../browser/migrate-1x-to-2x/">Migrate 1.x to 2.x</a>
         
     </li>
 
@@ -250,11 +256,11 @@
     
       
         
-          <li>Browser &raquo;</li>
+          <li>Overview &raquo;</li>
         
       
     
-    <li>Migrate 1.x to 2.x</li>
+    <li>Support Environment</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -264,26 +270,135 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="1x-2x">1.x 에서 2.x로 마이그레이션 하기</h1>
-<p>1.x에서 2.x로 API변경사항은 없음으로 코드 자체는 그대로 사용이 가능합니다.</p>
-<p>다만, PlayRTC 객체를 생성하는 과정에서 설정이 일부 변경되었습니다. 서비스 서버가 없어짐으로써 서비스 서버에서 설정해 주었던 PlayRTC 프로젝트키를 클라이언트에서 설정해 주어야 합니다.</p>
-<p>아래와 같이 수정합니다.</p>
-<pre><code class="Javasciprt">// 1.x
-app = new PlayRTC({
-  url: 'http://myservice.com/api/'      //REMOVED
-  localVideoTarget: 'localVideo',
-  remoteVideoTarget: 'remoteVideo'
-});
-
-
-// 2.x
-app = new PlayRTC({
-  projectKey: 'MY PROJECT KEY',           //ADDED
-  localVideoTarget: 'localVideo',
-  remoteVideoTarget: 'remoteVideo'
-});
-
-</code></pre>
+                <h1 id="playrtc-support-environment">PlayRTC Support Environment</h1>
+<p>PlayRTC가 지원하는 환경입니다.</p>
+<h2 id="browser-support">Browser Support</h2>
+<table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>Platform</th>
+<th>Minimum</th>
+<th>Recommend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chrome</td>
+<td>Desktop</td>
+<td>Over 23.x</td>
+<td>Latest Stable</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>Android</td>
+<td>Over 36.x</td>
+<td>Latest Stable</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>Desktop</td>
+<td>Over 22.x</td>
+<td>Latest Stable</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>Android</td>
+<td>Over 31.x</td>
+<td>Latest Stable</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>Desktop</td>
+<td>Over 18.x</td>
+<td>Latest Stable</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>Android</td>
+<td>Over 22.x</td>
+<td>Latest Stable</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>Desktop</td>
+<td>Not Available</td>
+<td>Not Available</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>iOS</td>
+<td>Not Available</td>
+<td>Not Available</td>
+</tr>
+<tr>
+<td>Explorer</td>
+<td>Desktop</td>
+<td>Not Available</td>
+<td>Not Available</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>크롬, 파이어폭스, 오페라의 경우 Windows, OSX, Linux 모두 최신 버전의 브라우저를 사용할 것을 권장합니다.</li>
+<li>크롬, 파이어폭스, 오페라의 경우 안드로이드에서 최신 버전의 브라우저를 사용할 것을 권장합니다.</li>
+<li>Explorer는 현재 브라우저에서 WebRTC를 지원하지 않고 있으며, Explorer에서 사용하고자 하면 PlayRTC ActiveX Plugin을 사용하여야 합니다.</li>
+<li>사파리는 현재 브라우저에서 WebRTC를 지원하지 않고 있습니다.</li>
+</ul>
+<h2 id="sdk-support">SDK Support</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>OS API</th>
+<th>Device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native Browser</td>
+<td>See Above</td>
+<td>See Above</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>Over API Level 15, Version 4.0.4, Ice Cream Sandwich</td>
+<td>Over Ice Cream Sandwich Device</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>Over iOS 7.1.2</td>
+<td>Over iPhone 5, iPad Air, iPad Mini2</td>
+</tr>
+<tr>
+<td>Windows Explorer</td>
+<td>Over Windows 7, Explorer 10</td>
+<td>Over Windows 7 Desktop Device</td>
+</tr>
+</tbody>
+</table>
+<h2 id="codec-support">Codec Support</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Codec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Video and Audio</td>
+<td>VP8</td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Opus</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>WebRTC는 기본적으로 미디어 코덱을 지정하고 있지는 않지만, 현재 PlayRTC는 VP8과 Opus기준으로 작동하고 있습니다.</li>
+</ul>
               
             </div>
           </div>
@@ -291,10 +406,10 @@ app = new PlayRTC({
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../android/dev-env/" class="btn btn-neutral float-right" title="Development Environment"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../feature-map/" class="btn btn-neutral float-right" title="Feature Map"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../ie-support/" class="btn btn-neutral" title="Microsoft Internet Explorer Support"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project-key/" class="btn btn-neutral" title="Project Key"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -320,10 +435,10 @@ app = new PlayRTC({
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../ie-support/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../project-key/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../android/dev-env/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../feature-map/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

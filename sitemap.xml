@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>None/hello-world/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,14 +20,56 @@
     
         
     <url>
-     <loc>None/concepts/about/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <loc>None/overview/about/</loc>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/concepts/migrate-1x-to-2x/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <loc>None/overview/architecture/</loc>
+     <lastmod>2015-06-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/overview/project-key/</loc>
+     <lastmod>2015-06-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/overview/support-environment/</loc>
+     <lastmod>2015-06-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/overview/feature-map/</loc>
+     <lastmod>2015-06-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/overview/faq/</loc>
+     <lastmod>2015-06-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/overview/glossary/</loc>
+     <lastmod>2015-06-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/overview/troubleshooting/</loc>
+     <lastmod>2015-06-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/overview/migrate-1x-to-2x/</loc>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -37,25 +79,25 @@
         
     <url>
      <loc>None/browser/dev-env/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/browser/simple-video-chat/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/browser/ie-support/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/browser/migrate-1x-to-2x/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -65,19 +107,19 @@
         
     <url>
      <loc>None/android/dev-env/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/android/simple-video-chat/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/android/migrate-1x-to-2x/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -87,13 +129,13 @@
         
     <url>
      <loc>None/ios/dev-env/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/ios/simple-video-chat/</loc>
-     <lastmod>2015-05-28</lastmod>
+     <lastmod>2015-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
