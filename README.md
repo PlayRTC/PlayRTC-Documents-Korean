@@ -16,11 +16,12 @@ PlayRTC의 문서 저장소.
 - ***주의: 구글 드라이브는 PlayRTC 프로젝트는 권한이 있는 사용자만 접근 가능합니다.***
 
 ## 체계
-- Read the Docs
+<!-- Read the Docs가 최신 mkdocs를 지원하지 않아 사용치 아니함. -->
+<!-- - Read the Docs
   - `master` 갈래에서 문서작성
   - [PlayRTC Github][PlayRTC Github]의 문서 저장소로 `push`
   - 연동된 [Read the Docs][Read the Docs]를 통해 빌드
-  - http://playrtc.readthedocs.org/ko/latest/ 로 배포
+  - http://playrtc.readthedocs.org/ko/latest/ 로 배포 -->
 - Github pages
   - `master` 갈래에서 문서작성
   - `mkdocs gh-pages` 실행
