@@ -5,9 +5,16 @@ pages:
 - Home: 'index.md'
 - Hello PlayRTC! : 'hello-world.md'
 
-- Concepts:
-  - 'About': 'concepts/about.md'
-  - 'Migrate 1.x to 2.x': 'concepts/migrate-1x-to-2x.md'
+- Overview:
+  - 'About': 'overview/about.md'
+  - 'Architecture': 'overview/architecture.md'
+  - 'Project Key': 'overview/project-key.md'
+  - 'Support Environment': 'overview/support-environment.md'
+  - 'Feature Map': 'overview/feature-map.md'
+  - 'Frequently Asked Questions': 'overview/faq.md'
+  - 'Glossary': 'overview/glossary.md'
+  - 'Trouble Shooting': 'overview/troubleshooting.md'
+  - 'Migrate 1.x to 2.x': 'overview/migrate-1x-to-2x.md'
 
 - Browser:
   - 'Development Environment': 'browser/dev-env.md'
