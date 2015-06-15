@@ -14,12 +14,12 @@ PlayRTC는 IE 브라우저에서도 WebRTC기술을 사용할 수 있도록 추�
 현재 PlayRTC의 IE 지원은 아래와 같습니다.
 
 - Windows 7 SP1 Home Premium, Professional, Ultimate
-  - IE 10
-  - IE 11
+    - IE 10
+    - IE 11
 
 - Windows 8.1, 8.1 Pro
-  - IE 10
-  - IE 11
+    - IE 10
+    - IE 11
 
 ## IE 지원
 
@@ -164,7 +164,7 @@ IE 에서는 레코딩할 경로와 파일 이름을 full path 로 전달 받습
 ## IE에서 PlayRTC ActiveX Plugin 삭제하기
 
 - 삭제
-  - Internet Explorer > 도구(Alt + x) > 추가 기능관리 > 도구 모음 및 확장 프로그램 > PlayRTC Class > 추가정보 > 제거
+    - Internet Explorer > 도구(Alt + x) > 추가 기능관리 > 도구 모음 및 확장 프로그램 > PlayRTC Class > 추가정보 > 제거
 - 삭제 확인
-  - 아래의 폴더에 `ATPlayRTC.dll`, `PlayRTC.dll`, `PlayRTC.inf` 파일이 없으면 성공적으로 제거가 된 상태입니다.
-  - `C:\Windows\Downloaded Program Files`
+    - 아래의 폴더에 `ATPlayRTC.dll`, `PlayRTC.dll`, `PlayRTC.inf` 파일이 없으면 성공적으로 제거가 된 상태입니다.
+    - `C:\Windows\Downloaded Program Files`

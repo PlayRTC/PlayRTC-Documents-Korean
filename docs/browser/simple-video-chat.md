@@ -3,6 +3,7 @@
 
 - [자바스크립트 수업 - 생활코딩](http://opentutorials.org/course/743)
 
+
 ## 바로 실행해 보기
 이전 장을 통해 필요한 환경을 갖춥니다.
 
@@ -43,6 +44,7 @@ $ cd ~/www && harp server -p 8000
 
 ![](DraggedImage.png)
 
+
 ## 구성 살펴 보기
 이 웹앱은 실제로는 `index.html`파일 하나로 이루어져 있습니다.
 
@@ -55,6 +57,7 @@ $ cd ~/www && harp server -p 8000
 ![](DraggedImage-1.png)
 
 여기서 채널이란, 이야기 방을 의미합니다. `Caller`와 `Callee`가 PlayRTC를 통해 통화 하기 위해서는 `Caller`가 직접 `Callee`에게 전화를 거는 것이 아닌 `Caller`가 PlayRTC 서버에 이야기방을 생성하고, 생성된 이야기 방의 식별자를 `Callee`에게 알려주면 `Callee`가 PlayRTC의 이야기 방에 접속하여 `Caller`와 통화를 할 수 있는 구성입니다.
+
 
 ## 코드 살펴 보기
 그러면 실재로 코드를 살펴 보도록 하겠습니다. HTML은 [Twitter](https://github.com/twitter)의 [Bootstrap](http://bootstrapk.com/)란 UI 프레임워크를 사용하고 있습니다. Bootstrap를 사용하면 간편하게 깔끔하고 웹표준과 모바일에 적합한 페이지를 만들 수 있습니다.
@@ -178,6 +181,7 @@ connectChannelButton.addEventListener('click', function(e) {
 
 `Callee`의 코드도 실질적으로 `Caller`의 코드와 크게 다르지 않습니다. 사실상 `Caller`가 `Callee`가 될수도 있고 `Callee`가 `Caller`도 될수 있지만 여기서는 전체적인 흐름을 간단히 설명하기 위해 이렇게 분리 해 놓았습니다.
 
+
 ## 복습
 단순한 코드이지만 한편으로 처음 사용해 보는 개발자를 위해 차근차근 살펴 보았습니다. 이 코드를 살펴보면서 다루어진 PlayRTC의 주요 개념에 대해 다시한번 살펴 보겠습니다.
 
@@ -186,6 +190,7 @@ connectChannelButton.addEventListener('click', function(e) {
 - PlayRTC 서버는 채널이라는 방 개념을 가지고 있고 매우 중요하다.
 	- 사용자(Peer)와 사용자(Peer)가 만나기 위해서는 PlayRTC서버의 채널을 통해 중계(Signaling) 합니다.
 	- “상대방의 e-mail과 같은 ID를 통해 전화하기”, “홈페이지에 PlayRTC로 상담요청하기”등 좀더 다양한 기능 구성을 갖는 서비스를 만들려면 채널과 채널의 접속상태인 세션을 동적으로 다루는 역할이 필요합니다. 이 채널을 어떻게 다루느냐에 따라 다양한 기능과 상황의 서비스를 만들 수 있는 것 입니다. 이 부분은 별도의 문서를 통해 살펴보겠습니다.
+
 
 ## 마무리
 이렇게 간단하게 영상/음성 통화 웹앱을 만들어 보았습니다. 아주 쉽죠? WebRTC를 사용하는데 필요한 복잡한 내용은 PlayRTC에 맞기고, 멋지고 세련된 서비스를 만드는데 집중하세요! PlayRTC는 쉽고 편리하게 영상/음성 커뮤니케이션 기능을 제공합니다.

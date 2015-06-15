@@ -1,5 +1,6 @@
 # 개발 환경 구성
 
+
 ## IDE 준비
 
 iOS 개발을 하기 위해서는 기본적으로 맥 하드웨어와 OSX 운영체제 및 애플 계정 및 애플에서 만든 [Xcode](Xcode) [IDE](IDE)이 필요합니다.
@@ -9,6 +10,7 @@ iOS 개발을 하기 위해서는 기본적으로 맥 하드웨어와 OSX 운영
 - [Start Developing iOS Apps Today](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343)
 
 설치를 완료했
+
 
 ## PlayRTC iOS SDK 준비하기
 
@@ -22,11 +24,9 @@ iOS 개발을 하기 위해서는 기본적으로 맥 하드웨어와 OSX 운영
 - [PROJECT-ROOT]/PlayRTC/libs/libsktplayrtc.x.x.x.a
 - [PROJECT-ROOT]/PlayRTC/public/PlayRTC.h 및 기타 `h` 확장자 파일
 
-
 ### Objective-C로 개발 준비 하기
 
 PlayRTC SDK는 현재 [Objective-C](Objective-C) 언어로 구성되어있으며 곧바로 다음장인 XCode 준비하기로 넘어가면 됩니다.
-
 
 ### Swift로 개발 준비
 
@@ -64,7 +64,6 @@ PlayRTC를 [Swift](Swift) 언어로 개발하기 위해서는 다음과 같이 `
 
 원하는 프로젝트를 [Xcode](Xcode)에서 만들고 위와 같이 SDK를 프로젝트 폴더에 복사하고 필요하다면 PlayRTC iOS SDK 브릿징 헤더 파일을 만들고 난 다음 빌드 환경을 구성하도록 하여야 합니다.
 
-
 ### Linked Frameworks and Libraries
 
 MyApp > Targets > MyApp > General > Linked Frameworks and Libraries에서 다음과 같이 링크된 라이브러리를 설정 합니다.
@@ -96,24 +95,22 @@ MyApp > Targets > MyApp > General > Linked Frameworks and Libraries에서 다음
 MyApp > Targets > MyApp > Build Settings에서 다음과 같이 설정합니다.
 
 - Architecture
-  - Architecture : $(ARCHS_STANDARD), $(ARCHS_STANDARD_INCLUDING_64_BIT)
-  - Build Active Architecture Only : NO
-  - Valid Architecture : armv7
+    - Architecture : $(ARCHS_STANDARD), $(ARCHS_STANDARD_INCLUDING_64_BIT)
+    - Build Active Architecture Only : NO
+    - Valid Architecture : armv7
 - Linking
-  - Other Linker FLags : -ObjC
+    - Other Linker FLags : -ObjC
 - Apple LLVM 6.0 – Language
-  - C Language Dialect : C99[-std=c99]
+    - C Language Dialect : C99[-std=c99]
 - Apple LLVM 6.0 – Language – C
-  - C++ Language Dialect : C++11[-std=c++11]
-
+    - C++ Language Dialect : C++11[-std=c++11]
 
 ### Build Phases
 
 MyApp > Targets > MyApp > Build Phases에서 다음과 같이 설정합니다.
 
 - Copy Bundle Resource
-  - icudtl.dat ...in PlayRTC/libs
-
+    - icudtl.dat ...in PlayRTC/libs
 
 ## 예제 앱 다운로드
 

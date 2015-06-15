@@ -1,6 +1,7 @@
 # 환경 준비하기
 PlayRTC로 1:1 영상/음성 통화 웹앱을 만들기 위해서는, 간단한 텍스트 에디터와 간단한 웹서버가 필요합니다. 이미 이러한 환경에 익숙 하다면, 다음장으로 곧장 넘어가도 좋습니다. 아니라면 각각 다음과 같이 준비해 보도록 합니다.
 
+
 ## 에디터
 평상시 사용하는 텍스트 에디터나 [IDE][IDE] 환경을 준비합니다.
 
@@ -11,6 +12,7 @@ PlayRTC로 1:1 영상/음성 통화 웹앱을 만들기 위해서는, 간단한 
 	- 참고 : [Sublime Text 수업 - 생활코딩](http://opentutorials.org/course/671/3595)
 - [Atom][Atom]
 	- 소셜 코딩으로 유명한 [Github][Github]에서 만든 [V8 자바스크립트 엔진][V8 engine]기반 모던 마크업/텍스트 에디터로, 다양한 플러그인을 통해 확장이 가능하며 오픈소스이자 무료 입니다. 다만 [Sublime Text][Sublime Text]에 비해 첫 시작 속도가 약간 느리고, 아직은 4M이상 파일을 편집할 수 없는점이 단점입니다.
+
 
 ## 웹 서버
 튜토리얼을 진행하기 위해서는 간단한 [웹 서버][Web Server]가 필요합니다. 여기서 웹 서버는 우리가 만들 PlayRTC 웹앱을 실행하는데 필요하며 실제로는 [Ruby][Ruby], [php][php], [node.js][node.js]와 같은 서버쪽 코드는 전혀 없이 단순히 [HTML][HTML] 파일을 전달하는 정적 웹서버 역할 입니다.
@@ -50,14 +52,9 @@ $ brew install node
 PS> npm install -g harp
 ```
 
-- OSX :
+- OSX, unix-like :
 ```Shell
 $ npm install -g harp
-```
-
-- unix-like :
-```Shell
-$ sudo npm install -g harp
 ```
 
 이제 명령 프롬프트/파워쉘/쉘에서 다음과 같이 실행하면 간단하게 웹서버가 작동합니다.
@@ -136,6 +133,7 @@ HTML 파일에 아래와 같은 코드를 삽입 함으로써 간단히 사용 �
 아래의 다운로드 링크를 통해 다운받아 사용합니다.
 
 - <http://www.playrtc.com/download/>
+
 
 ## 예제 앱 다운로드
 이제 예제앱을 다운로드 받고 준비 해 봅시다.
