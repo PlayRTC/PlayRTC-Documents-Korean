@@ -40,3 +40,6 @@ Video and Audio  | VP8
 Audio            | Opus
 
 - WebRTC는 기본적으로 미디어 코덱을 지정하고 있지는 않지만, 현재 PlayRTC는 VP8과 Opus기준으로 작동하고 있습니다.
+
+
+## Network Environment

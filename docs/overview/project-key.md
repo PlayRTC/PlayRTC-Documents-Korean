@@ -3,7 +3,7 @@
 PlayRTC 서비스를 사용하려면 T Developers에 가입하고 프로젝트를 생성하여 프로젝트 키를 받아야 합니다.
 
 - 한국어 사용자는 아래의 안내에 따라 T Developers에 가입하여 프로젝트 키를 발급받으면 됩니다.
-- 다국어 사용자는 playrtc@sk.com으로 연락 주세요.
+- 한국어 이외의 영어, 중국어 사용자는 playrtc@sk.com으로 연락 주세요.
 
 
 ## Sandbox Key
@@ -17,7 +17,7 @@ PlayRTC 서비스를 사용하려면 T Developers에 가입하고 프로젝트�
 
 ## T Developers
 
-T Developers(https://developers.sktelecom.com)는 SK Telecom의 다양한 API를 통합 지원하는 개발자를 위한 공간으로, PlayRTC를 포함한 많은 서비스의 운영과 사용 계약 관련 정보 등을 제공하며 또한 관리하고 있으며 아래의 기능을 제공 합니다.
+[T Developers](https://developers.sktelecom.com)는 SK Telecom의 다양한 API를 통합 지원하는 개발자를 위한 공간으로, PlayRTC를 포함한 많은 서비스의 운영과 사용 계약 관련 정보 등을 제공하며 또한 관리하고 있으며 아래의 기능을 제공 합니다.
 
 - PlayRTC 서비스 인증을 위한 Project Key 발급
 - PlayRTC 서비스 사용, 차단 등 API 제어
