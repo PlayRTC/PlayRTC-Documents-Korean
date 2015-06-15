@@ -21,7 +21,6 @@ pages:
   - 'Tutorial - Simple Video Chat': 'browser/simple-video-chat.md'
   - 'Microsoft Internet Explorer Support': 'browser/ie-support.md'
   - 'Migrate 1.x to 2.x': 'browser/migrate-1x-to-2x.md'
-  # - 'Code Samples': 'browser/code-samples.md'
 
 - Android:
   - 'Development Environment': 'android/dev-env.md'
