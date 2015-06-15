@@ -5,7 +5,7 @@
 
 PlayRTC는 크게 Client SDK와 Backend Service로 구성되어 있습니다. Client SDK는 개발자 여러분이 직접 앱을 개발하는데 사용하게 되며, Backend Service는 Client SDK의 작동을 지원합니다.
 
-![architecture](https://docs.google.com/drawings/d/1DdL1798xUbbPbDsWn0048TNgSoPBBu0OTrjc-llauII/pub?w=760&h=685)
+![Structure](https://docs.google.com/drawings/d/1DdL1798xUbbPbDsWn0048TNgSoPBBu0OTrjc-llauII/pub?w=760&h=685)
 
 
 ### Client SDKs
@@ -18,8 +18,6 @@ PlayRTC는 WebRTC를 네이티브로 지원하는 Chrome, Firefox등의 브라�
 
 ### Backend Service
 Backend Service는 SDK의 기능을 수행하기 위한 서버자원으로 핵심적으로는 Signaling, Channel을 관리해 줍니다. 그 외에 프로젝트 인증, 관리, 사용을 위한 [T Developers](T Developers)가 있습니다.
-
-[]:https://developers.sktelecom.com/
 
 
 ## Flow
@@ -34,7 +32,7 @@ WebRTC 기반 서비스를 만들고자 한다면 다음의 두가지 부분을 
 
 ### Basic Flow
 
-![PlayRTC Flow](https://docs.google.com/drawings/d/1jXCy-IcHo52mXH-x0IBJB6BhXIhF3O3LdLKAbiN4Dfs/pub?w=870&h=641)
+![Flow](https://docs.google.com/drawings/d/1jXCy-IcHo52mXH-x0IBJB6BhXIhF3O3LdLKAbiN4Dfs/pub?w=870&h=641)
 
 PlayRTC는 채널 이라는 개념을 도입하여 Peer와 Peer간 연결을 다룰 수 있습니다.
 
@@ -52,6 +50,8 @@ PlayRTC 채널은 다음과 같은 기능을 수행합니다.
 
 ### Basic Sequence
 
-![PlayRTC Sequence](https://docs.google.com/drawings/d/1tIuFc4d6R__PlBNwsBsp6yrdmVLZdaWwQYftknenos0/pub?w=674&h=556)
+![Sequence](https://docs.google.com/drawings/d/1tIuFc4d6R__PlBNwsBsp6yrdmVLZdaWwQYftknenos0/pub?w=674&h=556)
 
 개략적으로 순서를 간단하게 살펴봤습니다. 실제로 Peer-to-Peer 채널 연결 및 통신은 이보더 더 복잡하고 적지않은 과정을 거쳐야 합니다.
+
+[T Developers]:https://developers.sktelecom.com/
