@@ -1,3 +1,9 @@
+Deprecated Documents.
+이 저장소의 문서는 더 이상 사용되지 않습니다.
+
+Plase, Visit <http://www.playrtc.com/> and it's documents.
+<http://www.playrtc.com/>의 문서를 참고해 주세요.
+
 # PlayRTC 문서 저장소
 PlayRTC의 문서 저장소.
 - [MkDocs][MkDocs] 기반
